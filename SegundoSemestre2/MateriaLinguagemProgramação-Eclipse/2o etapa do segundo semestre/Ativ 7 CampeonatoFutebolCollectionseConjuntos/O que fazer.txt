@@ -1,0 +1,35 @@
+Exercício - Campeonato Futebol
+
+1) Criar um projeto Campeonato de Futebol 
+2) Criar uma classe Time
+    2.1) Atributos nome, colocação, cor
+    2.2) Métodos ganhar, perder, empatar
+         (Fiquem a vontade para pensar e se divertir com a lógica dos métodos)
+
+3) Criar uma classe Torcedor
+    3.1) Atributos nome, idade
+    3.2) Uma coleção de times -> Esta coleção não deve permitir times repetidos
+
+4) Classe Principal CampeonatoBrasileiro
+     4.1) Criar um mapa contendo o time e o estado 
+   (Sugestão de 10 times no mapa)
+     4.2) Encontrar o time do estado desejado, interagir com o usuário para informar a sigla do estado.
+     4.3) Criar uma coleção de times-> Utilizar a interface List -> Implementação ArrayList
+          Incluir 10 times
+          Interagir com o usuário, via JOptionPane e perguntar qual o seu time do coração e verificar se o time informado se encontra na lista que foi criada.
+          Se o time não existir, informar a mensagem: "Time não participando do Brasileirão!!!"
+          Se o time existir, informar a mensagem "O seu time do coração esta na colocação" + colocação. 
+
+     4.4) Criar uma coleção de torcedores -> Utilizar a interface List -> Implementação ArrayList
+          Incluir 5 torcedores
+          Incluir dois times para cada torcedor
+          Imprimir na tela os torcedores que torcem pelo time Santos
+          Retirar da lista os torcedores que torcem para o Corinthians
+     
+     4.5) Criar uma coleção de times -> Utilizar a interface Set
+          Incluir 5 times
+          Imprimir na tela todos os nomes dos times
+          Imprimir na tela o time da 1ª colocação
+          Retirar da coleção o time da última colocação
+     
+

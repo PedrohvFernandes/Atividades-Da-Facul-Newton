@@ -1,0 +1,7 @@
+//outra maneira para incluir os dois times para cada Torcedor:
+	
+//tirando a lista set torcedor do metodo timeSet é possivel puxar ela em outra classe, com isso é so passar o time em forma de objeto para a lista.
+//Time santos = new time();
+//santos.nome = "Santos";
+//pedroTorcedor.timesTorcedorSet.add(Atletico_MineiroList.nome ou CorinthiansMap.nome ou atleticoMineiroSet.nome ou santos.nome);
+		

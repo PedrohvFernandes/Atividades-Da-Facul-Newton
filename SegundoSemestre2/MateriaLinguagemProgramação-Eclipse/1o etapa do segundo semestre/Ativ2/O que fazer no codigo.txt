@@ -1,0 +1,11 @@
+Criar um programa que possua um telefone e que este telefone possua como características cor, contato, marca. Este telefone possui as funcionalidades:
+
+Ligar
+Receber como parâmetro o contato
+Imprimir na tela: Ligando para “contato”
+Tocar Música
+Não recebe nenhum parâmetro
+Começando o som!
+Criar uma classe principal chamada Adolescente, esta classe terá dois telefones, um com a marca de “YPhone” e outro com a marca “S10”.
+
+Realizar a chamada para Ligar e Tocar Música para os dois telefones, sendo que para o telefone “YPhone” teremos o contato Matheus e a cor Prata e para o telefone S10 teremos o contato Maria e a cor Preta.

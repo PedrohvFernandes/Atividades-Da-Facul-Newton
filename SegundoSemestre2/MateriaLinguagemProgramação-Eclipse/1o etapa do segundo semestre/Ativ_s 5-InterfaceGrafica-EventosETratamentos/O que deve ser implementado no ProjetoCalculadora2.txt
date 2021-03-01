@@ -1,0 +1,1 @@
+Colocar a operação calculadora com interface grafica, fazendo tratamentos nos eventos:

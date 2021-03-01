@@ -1,0 +1,23 @@
+1) Criar um Projeto chamado "ProjetoCalculadora";
+
+2) Criar o pacote "br.com.newton.linguagem.calculadora"
+
+        Dentro deste pacote criar uma classe chamada "Calculadora", essa classe terá um método principal.
+
+3) Criar o pacote "br.com.newton.lingugem.calculadora.operacao"
+
+        Dentro deste pacote criar uma classe chamada "Operacao", essa classe não terá método principal.
+
+4) Dentro da Classe operacao, criar os métodos "Somar" e "Multiplicar".
+
+        Somar => receber como parâmetros dois números.
+
+                              retornar o valor da soma.
+
+        Multiplicar => receber como parâmetros dois números.
+
+                             retornar o valor da multiplicação.
+
+5) A classe Calculadora, a principal deverá interagir com o usuário utilizando JOptionPane para receber os dois números e também para escolher a operação que deseja "1 - Soma ou 2 - Multiplicação";
+
+                      retornar o cálculo via mensagem.

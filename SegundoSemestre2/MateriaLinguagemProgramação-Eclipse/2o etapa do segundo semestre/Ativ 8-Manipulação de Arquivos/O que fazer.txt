@@ -1,0 +1,3 @@
+Crie um arquivo manualmente que contenha 10 nomes e um outro arquivo que contenha 10 sobrenomes. 
+Crie um programa que realize a leitura dos 10 nomes e dos 10 sobrenomes e escreva em um terceiro arquivo criado pelo sistema o nome  
+e o sobrenome concatenados em cada linha.

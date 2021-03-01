@@ -1,0 +1,51 @@
+Trabalho Interface Gráfica - Sistema de Gerenciamento e Controle de TCC
+
+Sistema de Gerenciamento e Controle de TCC
+
+Menus
+ -> Cadastro
+     -> Aluno
+     -> Curso
+     -> TCC
+
+-> Gestão de TCC
+-> Relatórios
+     -> TCC entregues
+     -> TCC atrasados
+
+
+Ao clicar em Cadastro -> Aluno
+Exibir uma Tela com os campos
+Nome: Campo Texto
+Curso: Campo ComboBox
+Endereço: Campo Texto
+Telefone: Campo Texto
+Botão Limpar
+Ao clicar no Limpar o sistema limpa os campos
+Botão Salvar
+Ao clicar no Salvar o sistema exibe "Aluno cadastrado com sucesso!"
+
+Ao clicar em Cadastro -> Curso
+Exibir uma Tela com os campos
+Nome: Campo Texto
+Duração: Campo Texto
+Botão Limpar
+Ao clicar no Limpar o sistema limpa os campos
+Botão Salvar
+Ao clicar no Salvar o sistema exibe "Curso cadastrado com sucesso!"
+
+Ao clicar em Gestão de TCC
+Aluno: Campo de Seleção
+Curso: Campo de Seleção
+Tema Trabalho: Campo Texto
+Data de entrega: Campo de data
+Botão Limpar
+Limpa os campos
+Botão Salvar
+Ao clicar no Salvar o sistema exibe "TCC cadastrado com sucesso!"
+
+Ao clicar em Relatórios -> TCC entregues
+Exibir uma mensagem informando "Os trabalhos da data 25/10/2020 foram entregues!"
+
+Ao clicar em Relatórios -> TCC atrasados
+Exibir uma mensagem informando "Os trabalhos dos alunos Aluno 1 e Aluno 2 estão atrasados"!
