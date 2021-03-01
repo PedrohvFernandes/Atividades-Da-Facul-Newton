@@ -1,0 +1,18 @@
+Implementar:
+
+- inserir em posição específica--ok
+
+- retirar em posição específica--ok
+
+- inserirOrdenado(int chave)--ok
+
+- atualizar(indice, valor)--ok
+
+- pesquisar(chave)--ok
+
+- exibirInvertido()--ok
+
+- retirar(chave)--ok
+
+https://repl.it/join/enmraxif-pedrohenriqu229
+

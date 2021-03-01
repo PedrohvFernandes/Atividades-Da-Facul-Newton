@@ -1,0 +1,161 @@
+Feitos:
+exibir
+inserir
+pesquisa
+
+class TadCelulaDuplEnc {
+  int valor;
+  TadCelulaDuplEnc prox;
+  TadCelulaDuplEnc anterior;
+}
+
+A Fazer:
+
+exibir de forma invertida--ok
+
+Main:
+ System.out.println("Impressão inversa.");
+    lista.exibirInvertido();
+
+TadCelulaDuplEnc:
+public void exibirInvertido() {
+		TadCelulaDuplEnc aux = ultimo;
+		while (aux != this.primeiro) {
+			System.out.print(" [ " + aux.valor + " ] <-> ");
+			aux = aux.anterior;
+		}
+		System.out.println("NULL");
+	}
+
+remover--ok
+
+Main:
+ lista.retirar(10);
+    System.out.println();
+    lista.exibir();
+    System.out.println();
+    System.out.println("Impressão inversa.");
+    lista.exibirInvertido(); 
+
+TadCelulaDuplEnc:
+public boolean retirar(int chave) {
+
+		System.out.println();
+		System.out.println("Buscando o valor: " + chave);
+
+		TadCelulaDuplEnc aux = this.primeiro.prox;
+		TadCelulaDuplEnc anterior = this.primeiro;
+
+		while (aux.prox != null && aux.valor != chave) {
+			anterior = aux;
+			aux = aux.prox;
+		}
+
+		// executar remoção
+		if (aux.valor != chave) {
+			System.out.println("O número não está na lista.");
+		} else {
+			TadCelulaDuplEnc proximo = aux.prox;
+			anterior.prox = aux.prox;
+			proximo.anterior = aux.anterior;
+			this.tamanho--;
+			return true;
+
+		}
+		return false;
+
+	}
+
+inverter--ok
+
+Main:
+ System.out.println();
+    System.out.println("Lista invertida.");
+    lista.inverter();
+    System.out.println();
+
+
+TadCelulaDuplEnc:
+public void inverter() {
+
+		TadCelulaDuplEnc aux = this.primeiro.prox;
+		TadCelulaDuplEnc anterior = this.primeiro;
+		TadCelulaDuplEnc auxInv = this.ultimo;
+		TadCelulaDuplEnc c = this.ultimo.anterior;
+		TadCelulaDuplEnc s = aux.prox;
+
+		while (aux.prox != null) {
+			anterior.prox = auxInv;
+			auxInv.prox = c;
+			c.anterior = auxInv;
+			c.prox = s;
+			s.anterior = c;
+			s.prox = aux;
+			aux.anterior = s;
+      aux.prox = null;
+
+      TadCelulaDuplEnc pos = new TadCelulaDuplEnc();
+      pos = anterior.prox;
+      while (pos != null) {
+      System.out.print(" [ " + pos.valor + " ] <-> ");
+      pos = pos.prox;
+			}
+      System.out.println("NULL");
+		}
+
+	}
+
+inserir ordenado--ok
+Main:
+
+ lista.inserirOrdenado(10);
+    lista.exibir();
+
+TadCelulaDuplEnc:
+
+public boolean inserirOrdenado(int chave) {
+     System.out.println();
+    System.out.println("Alocando o valor: " + chave);
+    TadCelulaDuplEnc anterior = null;
+    TadCelulaDuplEnc aux = primeiro;
+    if(tamanho == capacidade){
+      capacidade++;
+    }
+
+    while (aux != null && aux.valor < chave) {
+      anterior = aux;
+      aux = aux.prox;
+    }
+
+    TadCelulaDuplEnc nova = new TadCelulaDuplEnc();
+    nova.valor = chave;
+
+    if (anterior == null) {
+      nova.prox = primeiro;
+      primeiro = nova;
+    } else {
+      nova.prox = anterior.prox;
+      anterior.prox = nova;
+      
+    }
+    return true;
+	}
+
+	public void inserirVarios(int[] chaves) {
+
+
+inserir vários--ok
+
+Main:
+
+ int vetor [] = {5, 2, 4};
+	      lista.inserirVarios(vetor);
+
+TadListaDuplEnc:
+
+public void inserirVarios(int [] chaves) {
+   for (int i = 0; i < 3; i++) {
+   System.out.println("\n\nTentando Inserir valor " + chaves[i]);
+   this.inserir(chaves[i]);
+   this.exibir();
+  }

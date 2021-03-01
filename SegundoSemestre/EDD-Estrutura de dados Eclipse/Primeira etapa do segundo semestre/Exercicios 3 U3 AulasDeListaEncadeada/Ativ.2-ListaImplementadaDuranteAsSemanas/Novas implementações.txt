@@ -1,0 +1,104 @@
+
+    // pesquisa por uma chave->Concluido
+	Main:
+	  // pesquisa por uma chave
+    boolean achou = lista.pesquisar(10);
+    if (achou) {
+      lista.exibir();
+      System.out.println("Achou! 🎉 🎊 🎉  ");
+    } else {
+      System.out.println("Não encontrado: 😥");
+    } 
+
+	TadListaEncadeada:
+ 	public boolean pesquisar(int valor) {
+    System.out.println();
+    System.out.println("Buscando o valor: " + valor);
+    TadCelula aux = this.primeiro.prox;
+    while (aux != null) {
+      if (valor == aux.valor) {
+        return true;
+      }
+      aux = aux.prox;
+    }
+    return false;
+  }
+
+
+    	// remoção a partir de uma chave->Concluido
+
+	Main:
+	 // remoção a partir de uma chave
+      		 boolean removeu = lista.remover(15); {
+                if (removeu) {
+                lista.exibir();
+                    System.out.println("Foi removido");
+                            }
+                                } 
+	    
+	TadListaEncadeada:
+ public boolean remover(int valor) {
+    System.out.println();
+    System.out.println("Buscando o valor: " + valor);
+    
+    TadCelula aux = this.primeiro.prox;
+    TadCelula anterior = this.primeiro;
+    while (aux.prox != null && aux.valor != valor) {
+      anterior = aux;
+      aux = aux.prox;
+
+    }
+    // executar remoção
+    if (valor != aux.valor) {
+      System.out.println("O número não está na lista.");
+    } else {
+      this.ultimo = anterior.prox;
+      anterior.prox = aux.prox;
+      this.tamanho--;
+      return true;
+
+    }
+    return false;
+  }
+
+
+
+    // inserção ordenada->Concluido
+    Main:
+      boolean ordenado = lista.insercaoOrdenada(3);
+    if (ordenado) {
+      lista.exibir();
+      System.out.println("Foi alocado.");
+    } else {
+      System.out.println("Não foi alocado.");
+    }
+    
+    TadListaEncadeada:
+     public boolean insercaoOrdenada(int valor) {
+    System.out.println();
+    System.out.println("Alocando o valor: " + valor);
+    TadCelula anterior = null;
+    TadCelula aux = primeiro;
+
+    while (aux != null && aux.valor < valor) {
+      anterior = aux;
+      aux = aux.prox;
+    }
+
+    TadCelula nova = new TadCelula();
+    nova.valor = valor;
+
+    if (anterior == null) {
+      nova.prox = primeiro;
+      primeiro = nova;
+    } else {
+      nova.prox = anterior.prox;
+      anterior.prox = nova;
+    }
+    return true;
+  }
+
+
+
+link utilizado:http://fbarth.net.br/materiais/docs/estruturas/aListaEncadeada.pdf
+https://www.youtube.com/watch?v=ocbZ0i8-nCY

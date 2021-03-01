@@ -1,0 +1,6 @@
+Para-casa: Utilizando a TadVetor, implementar a inicialização do vetor(v) com o
+valor -1 (vazio), todas as posições com -1(vazio)
+
+Dois metodos utilizados--> o Arrays.fill(v, tamanho, v.length, -1)
+Segunda maneira--> Foi usar a constante VAZIO e dando o valor dela para -1, para que quando
+o vetor tiver vazio(0) ele mude para o numero -1. So aceita Int ou Double  

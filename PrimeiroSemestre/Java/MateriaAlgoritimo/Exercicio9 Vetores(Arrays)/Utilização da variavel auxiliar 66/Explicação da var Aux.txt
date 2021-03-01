@@ -1,0 +1,6 @@
+Exerci: 66--> a variavel auxiliar, se chama aux na literatura da programação
+
+se usa a var aux, para auxiliar quando se faz um decremento, para localizar um dado especifico,
+unir dois ou mais vetores, achar um dado menor, e etc
+
+Nesse caso foi para localizar a posição do dado menor no vetor e qual era o dado

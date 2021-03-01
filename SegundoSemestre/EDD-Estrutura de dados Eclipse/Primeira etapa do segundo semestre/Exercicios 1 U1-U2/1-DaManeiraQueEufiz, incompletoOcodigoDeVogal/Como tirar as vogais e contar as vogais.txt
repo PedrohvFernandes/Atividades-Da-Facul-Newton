@@ -1,0 +1,10 @@
+https://ricardospinoza.wordpress.com/2012/06/14/java-metodo-para-remover-caracteres-de-um-string/
+https://www.guj.com.br/t/resolvido-string/332834
+
+
+https://respostas.guj.com.br/49112-numero-de-vogais-em-uma-string
+
+Link do codigo completo que nos fizemos:
+https://repl.it/@JosuM/Vogais#Main.java
+
+o codigo esta errado

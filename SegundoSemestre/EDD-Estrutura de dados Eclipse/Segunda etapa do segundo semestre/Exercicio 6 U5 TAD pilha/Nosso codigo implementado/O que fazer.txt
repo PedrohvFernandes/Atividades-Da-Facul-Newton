@@ -1,0 +1,21 @@
+1. Criar uma pilha vazia//feito
+2. Empilhar itens na pilha (push)//feito
+3. Desempilhar itens na pilha (pop)//feito
+4. Exibir a pilha//feito
+5. Exibir o elemento no topo (peek)
+6. Pesquisar por uma chave na pilha
+7. Afundar/submerger elemento na pilha
+8. Subir elemento na pilha
+
+    System.out.println("1. Criar nova pilha");//feito
+    System.out.println("2. Exibir pilha");//feito
+    System.out.println("3. Empilhar novo item");//feito
+    System.out.println("4. Desempilhar item");//feito
+    System.out.println("5. Estรก cheia?");//feito
+    System.out.println("6. Estรก vazia?");//feito
+    System.out.println("7. Opter topo");
+    System.out.println("8. Pesquisar por uma chave");
+    System.out.println("9. Inverter a pilha");
+    System.out.println("10. Sair\n");
+    
+    Link:https://repl.it/join/dzmewwuk-pedrohenriqu229

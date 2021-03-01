@@ -1,0 +1,11 @@
+o equals serve pra tratar dados do tipo string (Java)
+
+(While)enquanto a "varivel" não for igual a fim é para continuar rodando
+if(se)a "variavel" Não for igual a fim é para continuar rodando
+
+pra ser diferente !FIM(Exemplo)
+pra ser igual      FIM(Exemplo)
+
+Caso queira saber como é que usa o comando equals, é so ir no 
+Construção de Algoritmos - 9 - Estrutura de Repetição - Enquanto - While - Condicional
+localizado na pasta "PDFS de ensino JAVA"

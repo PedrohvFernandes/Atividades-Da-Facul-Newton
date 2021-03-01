@@ -1,0 +1,22 @@
+10.0->13.2->15.0->4.5->2.1->NULL
+
+verificar se lista está vazia
+- se vazia retornar.
+
+maior 0.0, 10.0, 13.2, 15.0 (aux.valor) 1o elemento
+menor 0.0, 4.5, 2.1 (aux.valor) 10 elemento
+
+                            AUX
+10.0->13.2->15.0->4.5->2.1->NULL
+
+while (aux != null)
+  if(aux.valor > maior)
+    maior = aux.maior
+  if(aux.valor < maior)
+    menor = aux.valor
+  aux = aux.prox
+    
+    
+println(maior)    
+println(menor)
+

@@ -1,0 +1,19 @@
+
+Criar uma fila vazia--ok
+Emfilar itens na fila (QUEUE)--ok
+Desenfileirar itens na fila (DEQUEUE)--ok
+Exibir a fila--ok
+Está cheia?--ok
+Está vazia?--ok
+Exibir o elemento na frente--ok
+Exibir o elemento de trás--ok
+Pesquisar por uma chave na fila
+Inverter uma fila
+Frente para trás
+Trás para frente
+Inserir fura-fila--ok
+Alterar valor na fila
+Sair do programa
+
+Link: https://repl.it/join/wyqialjq-pedrohenriqu229
+

@@ -1,0 +1,37 @@
+Fazer a atividade 5
+
+https://docs.google.com/document/d/1XkVurt7xTJD7fbyl8aLl5k9HCpAoX3kFDx_4IjxppbI/edit
+
+link do codigo: https://repl.it/join/uxfusuds-eriklucas
+
+Problema 5:
+Entrada: um conjunto de números reais digitados pelo usuário
+Saída: Apresentar uma lista encadeada, contendo os valores informados
+A partir da lista encadeada:
+- Imprimir a listagem dos números
+- Calcular e exibir a média dos valores
+- Imprimir o maior valor da lista encadeada
+- Imprimir o menor valor da lista encadeada
+
+Exemplo:
+
+Informe a quantidade de números a ser digitada: 5
+
+Digite os números:
+10.0
+13.2
+15.0
+4.5
+2.1
+
+Lista encadeada com os números:
+10.0->13.2->15.0->4.5->2.1->NULL
+
+Média:
+8.96
+Maior valor:
+15.0
+Menor valor:
+2.1
+
+
