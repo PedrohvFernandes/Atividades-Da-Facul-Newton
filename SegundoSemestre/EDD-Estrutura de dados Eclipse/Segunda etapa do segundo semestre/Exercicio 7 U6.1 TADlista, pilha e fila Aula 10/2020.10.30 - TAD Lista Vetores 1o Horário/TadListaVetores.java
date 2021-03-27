@@ -1,5 +1,3 @@
-package atividades.u6lista;
-
 public class TadListaVetores {
     public static final int VAZIO = -1;
     public static final int MAX = 100;
