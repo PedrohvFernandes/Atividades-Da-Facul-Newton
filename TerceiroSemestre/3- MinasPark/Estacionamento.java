@@ -11,7 +11,7 @@ public class Estacionamento {
     private List<Automovel> automoveis;
     private List<Automovel> automoveisHistorico;
 
-    private Automovel carro;
+    private Automovel automovel;
 
     public Estacionamento(int quantidadeVagas, String nomeEstacionamentoEmpresa, int totalAutomovel, float taxaHora) {
 
@@ -40,7 +40,7 @@ public class Estacionamento {
         return totalAutomovel;
     }
 
-    public void obterQuantidadeVagasDisponivel() {
+    public void calcularQuantidadeVagasDisponivel() {
         int obterQuantidadeVagasDisponivel = quantidadeVagas - totalAutomovel;
 
         if (obterQuantidadeVagasDisponivel == 0) {
@@ -67,7 +67,7 @@ public class Estacionamento {
     }
 
     public void calcularTaxaOcupacao() {
-       
+
         if (this.automoveis.size() == 0) {
 
             System.out.println("\033[0;31mERRO:Estacionamento : " + this.nomeEstacionamentoEmpresa
@@ -75,88 +75,104 @@ public class Estacionamento {
             return;
         }
 
-        int taxaOcupacao = (this.totalAutomovel / this.quantidadeVagas) * 100;
+        int taxaOcupacao = (totalAutomovel / quantidadeVagas) * 100;
         System.out.println("Taxa de ocupação é de: " + taxaOcupacao);
 
         return;
 
     }
 
-    public Automovel cadastrarEntradaCarro(String placa) {
-        carro = new Automovel();
+    public Automovel pesquisarPorAutomovel(String placa) {
 
-        var dateTime = LocalDateTime.now();
-        String.format("%30s", dateTime.format(DateTimeFormatter.ISO_DATE_TIME));
-        carro.setPlaca(placa);
-        carro.setTempoEntrada(dateTime);
-
-        for (int i = 0; i < automoveis.size(); i++) {
-            Automovel a = automoveis.get(i);
-
-            if (a.getPlaca().equalsIgnoreCase(placa)) {
-                System.out.println("\033[0;31mERRO: " + carro.getPlaca() + ", já existente no estacionamento "
-                        + getNomeEstacionamentoEmpresa() + "\033[0m");
-                return null;
-            }
-
-            if (automoveis.size() >= quantidadeVagas) {
-                System.out
-                        .println("\033[0;31mERRO: Estacionamento " + getNomeEstacionamentoEmpresa() + " lotado\033[0m");
-                return null;
+        for (Automovel automovel : automoveis) {
+            if (automovel.getPlaca().equalsIgnoreCase(placa)) {
+                return automovel;
             }
         }
 
-        this.automoveis.add(carro);
-        totalAutomovel++;
-        System.out.println("\033[0;32mEntrada do carro cadastrado com sucesso: \033[0m" + placa);
-        System.out.println("Taxa do estacionamento por hora: " + this.taxaHora + "R$");
-        System.out.println("Tempo de entrada do veiculo: " + carro.getTempoEntrada());
-        return carro;
+        return null;
 
     }
 
-    public void cadastrarSaidaCarro(String placa) {
+    public Automovel pesquisarPorAutomovelHistorico(String placa) {
 
-        var dateTime = LocalDateTime.now();
-        String.format("%30s", dateTime.format(DateTimeFormatter.ISO_DATE_TIME));
-        carro.setTempoSaida(dateTime);
-
-        for (int i = 0; i < automoveis.size(); i++) {
-            Automovel a = automoveis.get(i);
-            if (a.getPlaca().equalsIgnoreCase(placa)) {
-
-                this.automoveisHistorico.add(carro);
-                this.automoveis.remove(carro);
-                totalAutomovel--;
-                System.out.println("\033[0;32mSaida do carro cadastrado com sucesso: \033[0m" + placa);
-                System.out.println("Tempo de entrada do veiculo: " + carro.getTempoEntrada());
-                System.out.println("Tempo de saida do veiculo: " + carro.getTempoSaida());
-
-                return;
+        for (Automovel automovelHistorico : automoveisHistorico) {
+            if (automovelHistorico.getPlaca().equalsIgnoreCase(placa)) {
+                return automovelHistorico;
             }
         }
 
+        return null;
+
+    }
+
+    public Automovel cadastrarEntradaCarro(String placa) {
+        automovel = new Automovel(placa);
+
+        var dateTime = LocalDateTime.now();
+        String.format("%30s", dateTime.format(DateTimeFormatter.ISO_DATE_TIME));
+        automovel.setTempoEntrada(dateTime);
+
+        if (pesquisarPorAutomovel(placa) != null) {
+            System.out.println("\033[0;31mERRO: " + automovel.getPlaca() + ", já existente no estacionamento "
+                    + this.nomeEstacionamentoEmpresa + "\033[0m");
+            return null;
+        }
+
+        if (automoveis.size() >= quantidadeVagas) {
+            System.out.println("\033[0;31mERRO: Estacionamento " + getNomeEstacionamentoEmpresa() + " lotado\033[0m");
+            return null;
+        }
+
+        
+        this.automoveis.add(automovel);
+        totalAutomovel++;
+        System.out.println("\033[0;32mEntrada do automovel cadastrado com sucesso: \033[0m" + placa);
+        System.out.println("Taxa do estacionamento por hora: " + this.taxaHora + "R$");
+        System.out.println("Tempo de entrada do veiculo: " + automovel.getTempoEntrada());
+        return automovel;
+
+    }
+
+    public Automovel cadastrarSaidaCarro(String placa) {
+
+        var dateTime = LocalDateTime.now();
+        String.format("%30s", dateTime.format(DateTimeFormatter.ISO_DATE_TIME));
+        
+            if (pesquisarPorAutomovel(placa) != null) {
+
+                automovel.setTempoSaida(dateTime);
+                this.automoveisHistorico.add(automovel);
+                this.automoveis.remove(automovel);
+                totalAutomovel--;
+                System.out.println("\033[0;32mSaida do automovel cadastrado com sucesso: \033[0m" + placa);
+                System.out.println("Tempo de entrada do veiculo: " + automovel.getTempoEntrada());
+                System.out.println("Tempo de saida do veiculo: " + automovel.getTempoSaida());
+
+                return automovel;
+            }
+
         if (automoveis.size() <= 0) {
             System.out.println("\033[0;31mERRO: Estacionamento: " + this.nomeEstacionamentoEmpresa + " vazio\033[0m");
-            return;
+            return null;
         }
 
         System.out.println("\033[0;31mERRO: " + placa + ", não existente no estacionamento "
                 + this.nomeEstacionamentoEmpresa + "\033[0m");
-        return;
+        return null;
     }
 
     public void exibirValorAPagar(String placa) {
-        if (carro.getPlaca().equalsIgnoreCase(placa) && carro.getTempoSaida() != null) {
+        if (pesquisarPorAutomovelHistorico(placa) != null && automovel.getTempoSaida() != null) {
             System.out.println("Automovel da placa: " + placa + ", tera que pagar: ");
 
-            carro.calcularTempoDePermancencia();
-            carro.calcularValorApagar(this.taxaHora);
+            automovel.calcularTempoDePermancencia();
+            automovel.calcularValorApagar(this.taxaHora);
 
             return;
         }
 
-        if (carro.getPlaca().equalsIgnoreCase(placa) && carro.getTempoSaida() == null) {
+        if (pesquisarPorAutomovel(placa) != null && automovel.getTempoSaida() == null) {
             System.out.println("\033[0;31mERRO: Automovel da placa: " + placa + " não possui tempo de saida\033[0m");
             return;
         }
