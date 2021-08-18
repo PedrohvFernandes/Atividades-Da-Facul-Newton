@@ -1,0 +1,257 @@
+// classe/objeto complexo - dividir em fases
+public class Veiculo {
+
+	private int janelas;
+
+    private int portas;
+
+    private int  rodas;
+
+	private String marca;
+
+    private String modelo;
+
+    private int ano;
+
+    private int km;
+    
+    private int potenciaEmHp;
+    
+    private String cor;
+
+
+
+    public Veiculo() {
+    }
+
+	public int getJanelas() {
+		return janelas;
+	}
+
+	public void setJanelas(int janelas) {
+		this.janelas = janelas;
+	}
+
+	public int getPortas() {
+		return portas;
+	}
+
+	public void setPortas(int portas) {
+		this.portas = portas;
+	}
+
+	public int getRodas() {
+		return rodas;
+	}
+
+	public void setRodas(int rodas) {
+		this.rodas = rodas;
+	}
+
+	public String getMarca() {
+		return marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+	public String getModelo() {
+		return modelo;
+	}
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+
+	public int getAno() {
+		return ano;
+	}
+
+	public void setAno(int ano) {
+		this.ano = ano;
+	}
+
+	public int getKm() {
+		return km;
+	}
+
+	public void setKm(int km) {
+		this.km = km;
+	}
+
+	public int getPotenciaEmHp() {
+		return potenciaEmHp;
+	}
+
+	public void setPotenciaEmHp(int potenciaEmHp) {
+		this.potenciaEmHp = potenciaEmHp;
+	}
+
+	public String getCor() {
+		return cor;
+	}
+
+	public void setCor(String cor) {
+		this.cor = cor;
+	}
+
+	@Override
+	public String toString() {
+		return "Veiculo [janelas=" + janelas + ", portas=" + portas + ", rodas=" + rodas + ", marca=" + marca
+				+ ", modelo=" + modelo + ", ano=" + ano + ", km=" + km + ", potenciaEmHp=" + potenciaEmHp + ", cor="
+				+ cor + "]";
+	}
+
+}
+
+
+public class VeiculoBuilderImpl implements VeiculoBuilder{
+
+    // classe/objeto complexo
+    private Veiculo veiculo;
+
+    public VeiculoBuilderImpl() {
+        this.veiculo = new Veiculo();
+    }
+
+
+	@Override
+	public void comJanelas(int janelas) {
+		veiculo.setJanelas(janelas);
+		
+	}
+
+
+
+	@Override
+	public void comPortas(int portas) {
+		veiculo.setPortas(portas);
+		
+	}
+
+
+
+	@Override
+	public void comRodas(int rodas) {
+		veiculo.setRodas(rodas);
+		
+	}
+
+
+
+	@Override
+	public void comMarca(String marca) {
+		veiculo.setMarca(marca);
+		
+	}
+
+
+
+	@Override
+	public void comModelo(String modelo) {
+		veiculo.setModelo(modelo);
+		
+	}
+
+
+
+	@Override
+	public void comAno(int ano) {
+		veiculo.setAno(ano);
+		
+	}
+
+
+
+	@Override
+	public void comKm(int km) {
+		veiculo.setKm(km);
+		
+	}
+
+
+
+	@Override
+	public void comPotenciaEmHp(int potenciaEmHp) {
+		veiculo.setPotenciaEmHp(potenciaEmHp);
+		
+	}
+
+
+
+	@Override
+	public void comCor(String cor) {
+		veiculo.setCor(cor);
+		
+	}
+	
+	
+    @Override
+    public Veiculo build() {
+        return veiculo;
+    }
+
+}
+
+
+
+
+public class Diretor {
+
+    private VeiculoBuilder builder;
+
+    public Diretor(VeiculoBuilder builder) {
+        this.builder = builder;
+    }
+
+    // (4) criar diferentes tipos de objetos complexos
+    public Veiculo construir(String tipo) {
+        if (tipo.equals("Carro Simples")) {
+            builder.comJanelas(4);
+            builder.comPortas(4);
+            builder.comRodas(4);
+            builder.comMarca("Renault");
+            builder.comModelo("Kwid Zen 1.0 MT");
+            builder.comAno(2019);
+            builder.comKm(156);
+            builder.comPotenciaEmHp(70);
+            builder.comCor("Vermelho");
+            
+        } else if (tipo.equals("Carro Potente")) {
+        	
+            builder.comJanelas(2);
+            builder.comPortas(2);
+            builder.comRodas(4);
+            builder.comMarca("Bugatti");
+            builder.comModelo("Centodieci");
+            builder.comAno(2019);
+            builder.comKm(380);
+            builder.comPotenciaEmHp(1600);
+            builder.comCor("Branco");
+        }
+
+        return builder.build();
+    }
+}
+
+
+
+public class MainCliente {
+
+    public static void main(String[] args) {
+
+        // (5) criação do builder e do diretor.
+        var builder = new VeiculoBuilderImpl();
+
+        var diretor = new Diretor(builder);
+
+        var carroSimples = diretor.construir("Carro Simples");
+        System.out.println(carroSimples);
+        System.out.println();
+
+        var carroPotente = diretor.construir("Carro Potente");
+        System.out.println(carroPotente);
+    }
+
+}

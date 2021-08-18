@@ -1,0 +1,26 @@
+Até onde eu sei, não existe uma extensão no VSCode que 'gere' in teste unitário. O teste unitário nada mais é que uma nova classe Java que realiza um teste sobre uma classe existente.
+
+Para te ajudar, eu criei um projeto java inicial com suporte ao JUnit5:
+
+https://github.com/waldirpires/poo-junit-demo
+
+Faça o seguinte:
+
+a) baixe este repositório
+b) abra este projeto no vscode
+c) instale o maven, se vc ainda nao o tiver instalado
+d) abra um terminal/tela de comando, no diretório do projeto, execute:
+
+maven clean compile test
+
+o comando acima deverá baixa todas as dependências do projeto, executar os testes pela linha de comando
+
+Eu estou com as seguintes extensões do VSCode instaladas:
+- Java Extension Pack
+
+Com a extensão acima, vc deve ser capaz de abrir um teste (i.e. CalculadoraTest.java) e executar ele via VSCode.
+
+Vou tentar mostrar isso na próxima aula bem rápido (por favor me lembre).
+
+At.
+Waldir

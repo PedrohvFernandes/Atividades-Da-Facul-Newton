@@ -1,0 +1,10 @@
+Dada a classe abaixo, apresente uma implementação do padrão Prototype e uma classe principal validando a implementação.
+
+public class PessoaFisica {
+  private String nome;
+  private String cpf;
+  private String dataNasc;
+}
+
+
+A solução deve ser realizada via REPL ou Github (LINK).

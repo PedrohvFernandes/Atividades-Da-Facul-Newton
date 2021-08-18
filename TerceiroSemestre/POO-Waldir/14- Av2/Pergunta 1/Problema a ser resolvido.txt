@@ -1,0 +1,17 @@
+Utilizando o tratamento de exceções em Java (try/catch, throws/throw), resolva o problema abaixo:
+
+Problema:
+
+Entrada: dados do usuário: idade (inteiro), ano de nascimento (inteiro), mês de nascimento (inteiro) e nome completo.
+
+Saída: validar se os dados informados estão corretos ou não
+
+Condições (devem ser tratadas/validadas via exceção):
+
+idade não pode ser negativa e superior a 18 e inferior a 100
+ano de nascimento deve ser superior a 1980 e inferior ao ano corrente (data do sistema).
+mês de nascimento deve ser entre 1 e 12, inclusivo.
+Nome não pode estar vazio ou nulo.
+A entrada pode ser lida via Scanner.
+
+A solução deve ser realizada via REPL ou Github (LINK).

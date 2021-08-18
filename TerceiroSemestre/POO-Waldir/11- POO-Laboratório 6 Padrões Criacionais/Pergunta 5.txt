@@ -1,0 +1,37 @@
+Referente aos padrões de projeto Fábrica Abstrata e Método de Fábrica, 
+ambos padrões estão relacionádos a fabricação de objetos. 
+Explique a principal diferença entre eles. Utilize exemplos. *
+
+A fabrica abstrata me permite criar fabricas de objetos, esses objetos estão 
+relacionados, eles fazem parte de um grupo ou de um tipo sem precisar de 
+especificar as suas classes concretas, então a gente vai adicionar fabricas de 
+objetos usando interface e os produtos também vão ser interfaces, a classe 
+cliente vai acessar as interfaces, criando uma abstração um desacoplamento, a 
+fabrica abstrata também vai ser uma interface pra criar cada um dos produtos, e 
+eu vou ter implementações dessa fabrica abstrata. Ex: Eu tenho uma fabrica para 
+construir cadeiras, sofá e mesas e pra cada um desses produtos eu tenho tipos 
+diferentes, então por exemplo eu tenho uma cadeira moderna,  uma cadeira 
+vitoriana, uma cadeira artística, por exemplo na hora de fazer uma entrega, eu 
+so posso entregar produtos do mesmo estilo, então por exemplo eu não posso 
+entregar uma cadeira artística com um sofa vitoriano e uma mesa moderna porque 
+eles não combinam entre si, então a gente quer garantir que na hora de criar eu 
+so crio cadeiras, sofás e mesas do mesmo tipo/estilo, independente da onde 
+esta sendo chamado a criação desses objetos, o problema é que sem esse padrão a 
+gente não tem o controle da criação desses produtos controlando por tipo por 
+exemplo, então cada criação é feita em lugares diferentes no sistema, então a 
+ideia é a gente padronizar a criação desses produtos por tipo num único ponto pra
+poder ser reaproveitado no nosso código.
+
+
+Já o método de fábrica é um método abstrato que vai ser sobrescrito nas 
+subclasses pois são elas é quem vai definir qual que é o produto que vai ser 
+gerado eventualmente no fluxo ou o meio de transporte que nos vamos utilizar. 
+Ex: Uma empresa de logística que a gente começa então entregas de forma terrestre 
+usando caminhão, então essa é a única forma que a gente suporta no momento, 
+em função do crescimento da empresa surgiu a necessidade da gente fazer as 
+entregas por navio, então necessidade de modificação da logística da nossa a
+plicação ficou bem confusa, porque a gente agora tem que tratar duas formas 
+diferentes de entrega e o nosso código não esta preparado pra abstrair o tipo 
+de entrega que a gente deseja fazer, então a gente vai usar o método de fabrica 
+pra resolver esse problema de dependência entre essas formas diferentes de 
+entrega 

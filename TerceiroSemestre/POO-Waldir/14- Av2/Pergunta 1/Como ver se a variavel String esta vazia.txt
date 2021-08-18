@@ -1,0 +1,1 @@
+https://www.delftstack.com/pt/howto/java/how-to-check-if-a-string-is-empty-or-null-in-java/#utilize-str-isempty-para-verificar-se-uma-string-está-vazia-em-java

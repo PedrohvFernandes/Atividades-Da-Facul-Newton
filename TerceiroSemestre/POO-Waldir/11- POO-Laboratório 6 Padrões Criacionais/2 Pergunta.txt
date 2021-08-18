@@ -1,0 +1,117 @@
+// (1) criar a interface de prototipo
+public interface Prototype {
+
+    Prototype clonar();
+}
+
+
+// Poderia implementar esse padrão sem essa classe Figura, mas pra ficar mais fácil de 
+//fazer outras figuras além do circulo, como por exemplo o quadrado ou retangulo, então foi
+// criado essa classe figura, so que a figura pode ter algum atributo especifico, por exemplo
+// o circulo ele tem o atributo raio que é especifico dele
+
+public abstract class Figura implements Prototype {
+
+    protected int x;
+    protected int y;
+    protected String cor;
+
+    public Figura(int x, int y, String cor) {
+        this.x = x;
+        this.y = y;
+        this.cor = cor;
+    }
+
+    public Figura(Figura source) {
+        this.x = source.x;
+        this.y = source.y;
+        this.cor = source.cor;
+    }
+
+    @Override
+    public String toString() {
+        return "Figura [x=" + x + ", y=" + y + ", cor=" + cor + "]";
+    }
+
+}
+
+//Com a classe Figura --> Classe Circulo estendendo de Figura:
+
+public class Circulo extends Figura {
+
+    int raio;
+
+    //forma tradicional de clonar/copiar um objeto
+    public Circulo(int x, int y, String cor, int raio) {
+        super(x, y, cor);
+        this.raio = raio;
+    }
+
+    // (2) criar um construtor que aceita um obj da mesma classe
+    public Circulo(Circulo source) {
+        super(source);
+        this.raio = source.raio;
+    }
+
+    // (3) adicionar o metodo de clonagem
+    @Override
+    public Prototype clonar() {
+        return new Circulo(this);
+    }
+
+    @Override
+    public String toString() {
+        return "Circulo [raio=" + raio + ", figura=" + super.toString() + "]";
+    }
+
+}
+
+
+//Ou caso se não tivesse a classe Figura:
+
+public class Circulo implements Prototype  {
+
+    int x;
+    int y;
+    String cor;
+    int raio;
+
+    // (2) criar um construtor que aceita um obj da mesma classe
+    public Circulo(Circulo source) {
+        this.x = source.x;
+        this.y = source.y;
+        this.cor = source.cor;
+        this.raio = source.raio;
+    }
+
+    // (3) adicionar o metodo de clonagem
+    @Override
+  public Prototype clonar() {
+        return new Circulo(this);
+    }
+
+    @Override
+    public String toString() {
+    	return "Circulo [x=" + x + ", y=" + y + ", cor=" + cor + "]";
+    }
+
+}
+
+
+public class MainCliente {
+
+    public static void main(String[] args) {
+
+        var prototipo = new Circulo(5, 8, "black", 12);
+        System.out.println(prototipo);
+        System.out.println();
+
+        var copia = prototipo.clonar();
+        System.out.println(copia);
+        System.out.println();
+        
+        // forma tradicional de clonar/copiar um objeto
+        var copia2 = new Circulo(prototipo.x, prototipo.y, prototipo.cor, prototipo.raio);
+
+    }
+}
