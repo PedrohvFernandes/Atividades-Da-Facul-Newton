@@ -1,0 +1,225 @@
+Como eu consigo indentificar unicamente um objeto dentro de um sistema orientado a objeto
+Suponha-se que eu tenho la 3 pessoas, como eu consigo identificar unicamente uma pessoa dentro desse conjunto de objetos:
+
+Por exemplo eu crio 3 pessoas(objetos) diferentes na minha memoria com atributos e metodos diferentes, como eu consigo identificar exclusivamente cada objeto
+como eu consigo saber que um objeto é diferente do outro que eles não são as mesmas pessoas:
+
+Como eu consigo identificar que esses objetos são diferentes ou iguais:
+errado: o nome da variavel
+
+certo: pelo endereço de memoria diferente, porque são duas alocações diferentes, dois "new" separados
+
+@Override
+    public String toString() {
+        return super.toString() + "\tÁrvore " + nome + ", altura: " + altura + "m";
+    }
+
+var arvore = new Arvore("Jatobá", 15.5f);
+var arvore2 = new Arvore("Jatobá", 15.5f);
+
+no terminal:
+
+Arvore@cac736f(endereço de memoria) Objeto em string( Arvore [nome=Jatobá, altura=15.5] )
+
+Arvore@4361bd48(endereço de memoria) Objeto em string( Arvore [nome=Jatobá, altura=15.5] )
+
+
+
+
+Mas o equals fala outra coisa: o Equals vai me falar se os dois objetos são iguais(true) ou não(false)
+
+@Override
+    public String toString() {
+        return super.toString() + "\tÁrvore " + nome + ", altura: " + altura + "m";
+    }
+
+var arvore = new Arvore("Jatobá", 15.5f);
+var arvore2 = new Arvore("Jatobá", 15.5f);
+
+System.out.println("\n\n");
+System.out.println(arvore);
+System.out.println("\n\n");
+System.out.println(arvore2);
+
+System.out.println(arvore.equals(arvore2));
+
+no terminal:
+Arvore@cac736f(endereço de memoria) Objeto em string( Arvore [nome=Jatobá, altura=15.5] )
+
+Arvore@4361bd48(endereço de memoria) Objeto em string( Arvore [nome=Jatobá, altura=15.5] )
+false
+
+endereços de memoria diferentes, mas os atributos iguais 
+mas equals fala que a arvore não é igual a arvore2, so que elas duas tem os mesmos
+atributos
+
+Super:
+da onde vem essa informação desse endereço de memoria?
+ele vem do super.toString() estou chamando o toString de alguem
+o "super" esta indo na classe "Object" que esta acima da hierarquia da classe arvore que é
+a classe mae de todas, porque todas as classes do java herdam/derivam da classe Object
+
+O super esta permitindo que a arvore chame a opereção toString() da classe que esta acima da hierarquia a classe mae
+So que la em cima o objeto so consegue imprimir endereço de memoria
+
+Equals:
+então o que esta acontecendo com o equals
+por que o equals esta me dando false ?
+
+no terminal:
+Arvore@cac736f(endereço de memoria) Objeto em string( Arvore [nome=Jatobá, altura=15.5] )
+
+Arvore@4361bd48(endereço de memoria) Objeto em string( Arvore [nome=Jatobá, altura=15.5] )
+false
+
+de onde esta a implementação desse equals
+estou chamando o equals de qual classe ? qual objeto?
+estou chamando da arvore
+System.out.println(arvore.equals(arvore2));
+so que na classe Arvore não possui nem um metodo equals
+ele puxa da classe Object tambem 
+
+então esse equals aqui-->System.out.println(arvore.equals(arvore2));
+esta puxando uma operação que vem da classe obeject, uma implementação do object
+Java.Lang.Object.equals(Object obj)
+na implmentação na classe Obeject, a comparação ela é feita em função do endereço de memoria
+
+o Equals faz a compração de acordo com a implementação na classe Obeject, a comparação ela é feita em função do endereço de memoria
+por isso o false
+
+System.out.println(arvore.equals(arvore2));
+
+no terminal:
+Arvore@cac736f(endereço de memoria) Objeto em string( Arvore [nome=Jatobá, altura=15.5] )
+
+Arvore@4361bd48(endereço de memoria) Objeto em string( Arvore [nome=Jatobá, altura=15.5] )
+false
+
+Dentro do tunel da linguagem java:
+vendo como o equals é implementado dentro da class Obeject
+
+//A implementação de dois objetos
+public boolean equals(Object obj){
+	return (this == obj);
+}
+
+O que ele verifica aqui?
+return (this == obj);
+
+ele verefica se o objeto corrente é igual ao outro objeto, comparando endereço de memoria
+
+
+Como fazer a comparação correta, nesse caso os atributos:
+
+Como faço para comparar os atributos em vez da memoria dos objetos, fazer o 
+equals do jeito certo, comparando o nome e altura da arvore
+Porque o Equals do Object nao vai ajudar a gente, ele compara o endereço de memoria
+
+o que interessa para nos é somente os atributos, o super.toString() foi usado somente
+didaticamente
+
+@Override
+    public String toString() {
+        return "Árvore " + nome + ", altura: " + altura + "m";
+    }
+
+Na classe Arvore:
+nesse caso o resultado tem que dar true, porque os atributos são iguais
+da para comprar toString com outro toString, mas tem uma outra melhor
+forma para fazer
+
+Iremos implementar o equals na nossa classe Arvore para fazer a comparação de atributos:
+
+public boolean equals(Object obj){
+
+	return super.equals(obj);
+}
+
+ou a gente adiciona ou sobreescreve o comportamento do equeals que originalmente estava na classe object
+So que agora nos estamos sobrescrevendo o comportamento do equals, fazendo com que nos
+controlemos a forma como os dois objetos são comparados
+
+alem de implementar o equals iremos sobrescrever a implementação do equals que vem da
+classe object
+
+Como eu sei que um objeto é igual ao o outro?
+
+1ºIremos fazer testes
+
+Primeiro um teste simples:
+
+String de uma e comparar com a outra
+Nesse caso esse to.String usado no metodo equals vai ser da classe que iremos
+comparar um objeto com o outro, no caso a arvore com a arvore2
+
+
+toString da classe Arvore
+@Override
+    public String toString() {
+        return "Árvore " + nome + ", altura: " + altura + "m";
+    }
+
+Na classe da Arvore:
+public boolean equals(Object obj){
+		  //toString representação dessa Arvore
+			     //igual(equals)	
+				   //A representação do outro objeto que chegar
+	return this.toString().equals(obj.toString());//Controlando como que o Equals ira se comportar comparando um obj com o outro
+}
+
+O que estou fazendo aqui:
+return this.toString().equals(obj.toString());
+
+Estou pegando essa frase de uma arvore e da outra arvore e verificando se as duas são iguais
+string com string da para comparar bem se as duas forem identicas vai falar que são iguais
+
+Então a gente transformou o nosso objeto em frase, ae agora nos vamos ter duas frases sendo comparadas
+na hora de comparar se dois objetos são iguais, da para comparar uma string do toString() separada, por exemplo so o nome, mas
+nesse caso queremos comparar todas as strings pra ver se as duas arvores são iguais
+
+Na classe main:
+System.out.println(arvore.equals(arvore2));
+
+Terminal:
+Objeto em string( Arvore [nome=Jatobá, altura=15.5] )
+
+Objeto em string( Arvore [nome=Jatobá, altura=15.5] )
+true
+
+Agora que a gente implementou o equals dentro da arvore, ninguem melhor do que a propia classe Arvore
+pra saber que ela é igual a outro objeto, porque ela conhece os seus atributos pra fazer a comparação
+
+equals é um dos exemplos em que a gente altera o comportamento da classe object, colocando esse comportamento
+dentro da nossa propia classe, a mesma coisa que a gente fez com o toString()
+
+toString da classe Arvore
+@Override
+    public String toString() {
+        return "Árvore " + nome + ", altura: " + altura + "m";
+    }
+
+
+Porque a classe Object tambem tem o metodo toString()
+super.toString() ele vai imprimir o endereço de memoria:
+
+//implementação do toString no nivel de objeto
+public String toString(){
+
+return getClass().getName() + "@" + Integer.toHexString(hashCode());
+
+}
+
+ele pega o nome da classe getClass().getName() mais o o @
+ele pega o Codigo Hash que é o indentificador do objeto em memoria (hashCode())
+e converte para uma String hexadecimal Integer.toHexString
+
+com isso a gente altetou esse compartamento na classe Arvore:
+
+toString da classe Arvore
+@Override
+    public String toString() {
+        return "Árvore " + nome + ", altura: " + altura + "m";
+    }
+
+em vez de retornar a String em hexadecimal, com o hashCode, ele vai retornar
+um nome coerente com o nome da class e todos os atributos que pertecem a classe

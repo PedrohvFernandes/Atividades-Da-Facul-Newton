@@ -1,0 +1,23 @@
+Diferença entre CompareTo e Equals e se pode usar o compareTo para flot, int, etc tipos
+primitivos
+
+O float não precisa usar o compareTo(); porque o float é um tipo primitivo.
+
+Tipos primitivos você consegue comparar dessa forma--> a == b
+é possivel comparar diretamente usando o sinal de igual(=)
+pra tipos primitivos voce não precisa usar o compareTo();
+geralemte o comparteTo(); é usado para comparar objetos num nivell mais abstrato, por
+exemplo comparando dois objetos-->Duas arvores.
+
+Equals:
+Ja o Equals ele so fala se é igual, o equals pode ser que seja da classe object
+que no caso ira ver se é igual o endereço de memoria e o equals pode ser de uma 
+determinada classe que foi criado por nos, ae no caso a gente implementa da melhor
+forma possivel para retornar algo que a gentei queira que ele compare, por
+exemplo todas strings de um bojeto com outro, ou somente um atributo dos dois objetos
+ele não faz comparações, ele so verifica se os dois são iguaism se for igual ele retorna
+true se não é false(Dois valores). 
+
+O compareTo(); ele so faz uma comparação mais minuciosa
+ele so vai calcular a diferença entre os dois objetos, como se fossem uma conta matematica,
+variação etre A e B por exemplo

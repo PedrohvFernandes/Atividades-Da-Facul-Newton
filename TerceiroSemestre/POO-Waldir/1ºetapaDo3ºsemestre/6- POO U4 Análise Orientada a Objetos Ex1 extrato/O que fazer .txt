@@ -1,0 +1,20 @@
+Elaborar um sistema de cálculo de holerite (comprovante de salário) para funcionários
+Entrada: ano, mês, quantidade de horas 
+trabalhadas, valor hora, bonus
+Saída: informações de salário
+Nome do beneficiário
+Quantia bruta
+Quantia líquida
+Horas trabalhadas
+Descontos de IRPF (20%) e INSS (11%)
+
+1 Parte: Identificar as principais classes
+
+2 Parte: Parte 2: Detalhar as classes
+Ex: atributos, operações principais, 
+relacionamentos
+
+3 Parte: Detalhar os comportamentos
+
+4 Parte: Diagrama de sequência das 
+classes

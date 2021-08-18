@@ -1,0 +1,95 @@
+O problema:Gerenciar entrada e saiada de automoveis ne um estacionamento de uma determinada empresa
+
+uma empresa de estacionamento pago, por exemplo a minasPark, que é responsavel por gerenciar o controle de automoveis
+que entra e sai e em função desse controle de entrada e saiada a gente calcula o custo desse estacionamento
+
+Implementar um sistema que va gerenciar essas informações 
+
+O sistema vai ter que calcular o tempo do automovel no estacionamento
+A gente precisa guardar o tempo de entrada e tempo de saida do automvel pra esse tempo de diferença
+do tempo e a partir desse calculo da diferença do tempo a gente calcular o valor em reais quanto que o automovel
+vai precisar pagar no estacionamento em função do tempo que ele permaneceu no estacionamento
+
+A gente vai calcular o valor total do estacionamneto a partir de uma taxa por hora(taxa/hora)
+
+Vai ser usado uma classe de terminal/menu para fazer o controle
+
+Operações: 
+
+ele vai cadastrar a entrada de um automovel, então a gente vai ter que digitar a placa
+do automovel e o sistema salva a data hora que esse cadastro foi feito, a hora que o automovel entro
+e nesse sistema quando for feito o cadastrado é gerado uma nota pro prietario do carro levar como referencia
+cadastrar entrada (placa)
+
+Aqui é quando o proprietario chega com a nota pra pagar, com isso registrando a saida do automovel, com isso gerando
+o valor total a ser pago pelo propetario
+cadastrar saída (placa)
+
+A gente precisa saber quantas vagas tem ao todo
+exibir quantidade total de vagas
+
+Quantas vagas disponiveis das vagas ao todo
+exibir quantidade de vagas disponíveis
+
+A taxa de ocupção eu vou pegar a quantidade de automovel dentro do estacionamento divido pela quantidade de vagas
+exibir taxa de ocupação do estacionamento
+
+aqui vai ser feito na hora de cadastrar a saida
+exibir valor do estacionamento a ser pago pelo automóvel (placa)
+
+
+Explicando Diagrama de classes do Waldir:
+Classes indentificadas nesse sistema por enquanto:
+[Automovel]
+Com o estacionamento sera possivel controlar os automoveis
+[Estacionamento]
+Entrada e saida vai ser feita pelo terminal/menu(Interface)
+lembrando que o main não vai ser o terminal, vamos ter uma classe main, que vai associonar o Termianl
+O terminal vai trabalhar com entrada e saida, no main a gente instancia o terminal e dentro do terminal a gente controla o estacionamento
+[Terminal]
+Padrão
+[Main]
+
+Classes, atributos e operações:
+
+Explicando atributos:
+A placa do carro(placa:String)
+pra calcular o tempo de permanencia do automovel(entrada:DataHora;saida:DataHora;) a gente tem que colocar do tipo DataHora, porque o carro pode entrar de noite e sair no outro dia
+e pra calcular esse tempo de diferença é necessario tambem da data
+Tempo de permanencia(tempo:float) pode ser em minutos por isso o tipo dele é em float
+valor para pagar(valor:float) cada automovel paga seu valor especifico
+
+Explicando Operações:
+Eu preciso calcular o valor do tempo de permanencia-->calcularTempoNoEstacionamento() ele vai pegar a dataHora do inicio e a dataHora do fim e fazer a diferença entre eles
+fazendo o calculo para o automovel saber quanto tempo que ele ficou no estacionamento pra a gente fazer o calculo do valor que ele vai precisar pagar
+Valor a pagar passando a taxaHora do Estacionamento, o carro ele sabe o quanto que ele ficou, com isso obter o valor total a ser pago-->calcularValorAPagar(taxaHora)
+[Automovel|placa:String;entrada:DataHora;saida:DataHora;tempo:float;valor:float|calcularTempoNoEstacionamento();calcularValorAPagar(taxaHora)]
+
+Explicando atributos:
+Nome da empresa do estacionamento(MinasPark por exemplo)
+Quantidade de vagas(totalVagas:int;totalAutomoveis:int) eu cadastrato o total de vagas da quele estacionamento por exemplo 100 vagas e total de automoveis vai ser a quantidade de automoveis que existe nesse estacionamento
+A taxa de hora é quanto eu vou pagar por hora(taxaHora:float), por exemplo 12 reais então todos os carros irao pagar 12 reais vezes o tempo que ele ficou
+
+Explicando Operações:
+Total de vagas disponoveis --> calcularQuantVagasDisponiveis(); totalVagas - totalAutomveis
+Taxa de ocupação --> calcularTaxaDeOcupacao() totalAutomoveis/totalVagas --> 100% seria que o estacionamento esta cem por cento cheio, a taxaDeOcupação ela vai ser calculado
+em função do total de automoveis sobre o total de vagas, um valor sempre calculado, uma porcentagem de 0% a 100%
+[Estacionamento|nome:String;totalVagas:int;totalAutomoveis:int;taxaHora:float|calcularQuantVagasDisponiveis();calcularTaxaDeOcupacao()]
+
+Explicando Operações:
+Essas operações do terminal, vão ser itens de menu que o usuario vai poder executar no sistema, com isso conseguindo processar o estacionamento e automovel
+Com o cadastrarEntrada(placa);cadastrarSaida(placa) o sistema a partir da placa econcontrar o automovel colocar a saida no Automovel e fazer o calculo do tempo do automovel que ele esteve no estacionamento
+exibirValorAPagar(placa) com a placa a gente consegue informar quanto que o carro vai precisar pagar, a partir do estacionamento a gente pega a lista de automveis, pega o automovel dessa placa e faz o calculo que etsa na classe Automovel
+[Terminal{bg:green}|cadastrarEntrada(placa);cadastrarSaida(placa);exibirValorAPagar(placa);exibirQuantVagasDisponiveis();exibirQuantTotalVagas();exibirTaxaDeOcupacao()]
+
+Relacionamento:
+
+uma agregação, pois o estacionamento não é necessario que tenha automovel para ser um estacionamento, pra ele existir
+O Automovel ele é o agregado do Estacionamento que é o agragador
+[Automovel]0..*<-<>1[Estacionamento]
+
+Um relacionamento somente de dependencia, o terminal vai depender do estacionamento porque cadastro de entrada a gente vai usar o estacionamento, porque o estacionamento precisa da lista de automoveis pra encontrar a placa 
+pra cadastrar a entrada, a mesma coisa pra saida, e a mesma coisa pra exibirValorApagar porque a gente precisa da placa tambem, verifica se de fato ele ja saiu, ja tem a saida inserida pra pode exbir na tela o valor que o usuario precisa pagar
+[Estacionamento]-[Terminal]
+
+[Main]->[Terminal]

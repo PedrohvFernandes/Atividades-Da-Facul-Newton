@@ -1,0 +1,29 @@
+Sistema para emitir comprovantes
+
+A)Para implementar essa solução foi usado a P.O.O, porque a gente vai indentificar as classes
+indentificar os atributos, operações e relacionamentos, promover o reeuso das classes, atributos e componentes
+pra fazer um sistema eficiente e com qualidade, especificamente o fato da gente precisar uma armazenamento no banco de dados
+porque de fato a gente vai ter classes, objetos de fato para armazenar isso no banco
+Então a grande justificativa é, praticamente todas as informações que estão listadas:Classes, atributos, operações e relacionamentos, tudo que faz parte do extrato
+
+B)Classes do sistem:
+Loja
+
+Extrato/comprovante/compra
+
+Quase nada de cliente, somente o nome e o cartao dele, e a operação que ele fez
+Cliente
+
+Menu
+
+C)Atributos e operações:
+
+Loja|nome;cnpj;endereco
+
+Extrato/comprovante/compra|data-hora;forma de pagamento(debito, credito);valor;tipo(a vista, parcelado)
+parcelado-qtdVezes;codAutenticação--> codigo de autenticação do pagamaneto;via --> do estabelecimento e do cliente, duas copias ao todo;logo(cielo, etc)
+
+Quase nada de cliente, somente o nome e o cartao dele, e a operação que ele fez
+Cliente|nome;cartao(bandeira, 4 digitos)
+
+Menu|cadastrarLoja();cadastrarVenda()--> executa todo o processo de venda pra emitir o comprovante, com isso a gente passa as informações do extrato e cliente que é a pessoa que da fato esta pagando

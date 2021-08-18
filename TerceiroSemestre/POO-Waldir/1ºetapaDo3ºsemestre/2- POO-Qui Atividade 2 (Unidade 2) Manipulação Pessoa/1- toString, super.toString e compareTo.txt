@@ -1,0 +1,156 @@
+toString();
+
+Exemplo (Árvore)://Na calsse Arvore
+
+    @Override
+    public String toString() {
+        return "Árvore " + nome + ", altura: " + altura + "m";
+    }
+
+//Na calsse Main
+
+       System.out.println("Digite o nome: ");
+       var nome = scanner.nextLine();
+ 
+       System.out.println("Digite a altura: ");
+       var altura = scanner.nextFloat();
+ 
+       var arvore1 = new Arvore(nome, altura);
+ 
+       // arvore1.setNome("Jatobá");
+       // arvore1.setAltura(15.0f);
+       System.out.println(arvore1); // toString - converte objeto para String
+
+
+O metodo toString na classe é um metodo que vem da classe object, a gente esta herdando/mudando
+comportamento dele para ele retornar todas informações de uma classe, nesse caso a arvore,
+no caso da arvore, ela tem nome e altura, então a gente vai exibir uma representação de
+um objeto em string, na hora de imprimir ela:
+
+System.out.println(arvore1)
+
+Se não tivesse toString na classe Arvore ele iria imprimir o endereço(Referencia) de memoria,
+a onde a arvore foi alocada na memoria, ae teria que usar o get para puxar o dado do objeto
+
+Arvore@cac736f(endereço de memoria)
+
+ele transforma esse objeto em string, para poder exibir esse objeto atraves desse metodo
+toString(); é como se estivesse pegando um objeto que esta na memoria e transformando
+ele em string para ele ser exebido como mensagem 
+
+Objeto em string( Arvore [nome=Jatobá, altura=15.5] )
+
+A gente tem que falar o que vai ser impresso na saida padrao:
+return "Árvore " + nome + ", altura: " + altura + "m"
+
+Então dentro de um unico metodo, dentro da classe arvore a gente imprimir todos os atributos da arvore
+
+Isso esta ligado muito a coesao, a questão de responsabilidade, porque por exemplo
+estou na classe main e eu quero imprimir a arvore na tela, qual que é a melhor estrutura de dados
+que deveria ter essa responsabilidade que que tem que ser impresso e o que não tem que 
+ser impresso, a propia arvore, por isso que a gente esta colocando o toString(); dentro da
+Arvore, porque so ela sabe como que tem que ser gerado 
+
+O metodo toString é herdado da classe object, a classe object que me permite que todos
+os objetos criados da classe java possam ser serializados pra string, nesse caso
+a gente esta serializando um objeto para String.
+
+o println me permite transformar qualquer objeto em string, desde que esse objeto ele tenha
+na definição da classe um metodo chamado toString(); ou se voce colocar o objeto e puxar o dado do atributo
+atraves do get
+
+super.toString(); estou chamando o toString de alguem
+
+@Override
+    public String toString() {
+        return super.toString() + "\tÁrvore " + nome + ", altura: " + altura + "m";
+    }
+
+imprimi o endereço de memoria dos objetos e o objeto em String ao mesmo tempo
+
+var arvore = new Arvore("Jatobá", 15.5f);
+var arvore2 = new Arvore("Jatobá", 15.5f);
+
+Arvore@cac736f(endereço de memoria) Objeto em string( Arvore [nome=Jatobá, altura=15.5] )
+
+Arvore@4361bd48(endereço de memoria) Objeto em string( Arvore [nome=Jatobá, altura=15.5] )
+
+da onde vem essa informação desse endereço de memoria?
+ele vem do super.toString() estou chamando o toString de alguem
+o "super" esta indo na classe "Object" que esta acima da hierarquia da classe arvore que é
+a classe mae de todas, porque todas as classes do java herdam da classe Object
+
+O super esta permitindo que a arvore chame a opereção toString() da classe que esta acima da hierarquia a classe mae
+So que la em cima o objeto so consegue imprimir endereço de memoria
+
+
+Java compareTo(); Método
+
+método compareTo () para comparar duas formas: String objeto a ser comparado com. 
+Compara duas cordas lexicograficamente.
+
+class Main {
+  public static void main(String[] args) {
+
+    var pessoa1 = new Pessoa("José das Couves", "123456789-01", "2020/01/01", 32.3f);
+    var pessoa2 = new Pessoa("Maria das Couves", "123456789-01", "1998/01/01", 32.3f);
+    var pessoa3 = new Pessoa("Marta das Couves", "123456789-01", "2010/01/01", 32.3f);
+
+    System.out.println(pessoa1);
+    System.out.println(pessoa2);
+    System.out.println(pessoa3);
+
+    // assumir que a 1a pessoa é a caçula
+    var cacula = pessoa1;
+
+    if (cacula.getDataNasc().compareTo(pessoa2.getDataNasc()) < 0) {
+      cacula = pessoa2;
+    }
+
+    if (cacula.getDataNasc().compareTo(pessoa3.getDataNasc()) < 0) {
+      cacula = pessoa3;
+    }
+    System.out.println("O caçula é: " + cacula.getNome());
+
+  }
+}
+
+Ele compara/verifica se uma String objeto com a outra:
+if (cacula.getDataNasc().compareTo(pessoa2.getDataNasc()) < 0) {
+      cacula = pessoa2;
+    }
+se ele retornar 0 é porque as duas são iguais, se retornar -1 a cadeia comparativa é 
+menor, se vim 1 é porque ela é maior, nesse caso a variavel Cacula no inico ela vai atribuir
+as caracteristicas da "pessoa 1", com isso, a gente esta comparando as idades uma das outras
+no caso pessoa1 esta sendo comparada com a pessoa2 com relação a idade getDataNasc(), como a pessoa1
+nasceu em "2020/01/01" e a pessoa2 nasceu em "1998/01/01" etão a pessoa1 tem uma cadeia
+de caracteres de nascimento maior do que a outra pessoa, porque 2020 é maior que 1998, ja
+o mes 01 e o dia 01 são iguais, mas se dentro da cadeia da string comparada tiver pelo menos um valor,
+ou caracter a mais que foi comparada com a outra ele ira retornar um(1) numero em Int
+e nesse caso desse if foi comparado que: se a pessoa1 tiver uma cadeira de caracter menor
+que a de pessoa2 então a variavel cacula iria atribuir as caracteristicas da pessoa2
+if (cacula.getDataNasc().compareTo(pessoa3.getDataNasc()) < 0) {
+      cacula = pessoa3;
+    }
+    System.out.println("O caçula é: " + cacula.getNome());
+ O caçula é: Jose das couves. 
+
+Valor de retorno:
+Se a cadeia de argumento é igual a esta cadeia, ele retorna um valor de 0;
+Se esta cadeia é menor do que o parâmetro de cadeia, ele retorna um valor inferior a zero; no caso -1
+Se esta cadeia é maior do que o parâmetro de cadeia, um valor maior que 0 é retornado. no caso 1
+
+O compareTo verifica se um objeto é maior, menor ou igual a outro. Ao invés de retornar um boolean, ele retorna um int. 
+Se este int for negativo, significa que o objeto atual é menor que o objeto comparado. 
+Se retornar um int positivo significa que o objeto atual é maior que o objeto comparado, e se retornar zero significa que são iguais. 
+Em geral o compareTo é utilizado quando se deseja ordenar um conjunto de objetos de uma dada classe, utilizando por exemplo, Collections.
+
+Regrinhas para o método compareTo():
+:arrow: Deve-se garantir que o sinal de x.compareTo(y) seja igual ao simétrico negativo de -y.compareTo(x). Em outras palavras
+
+sinal(x.compareTo(y)) == -sinal(y.compareTo(x))
+:arrow: Se x.compareTo(y) é positivo E y.compareTo(z) é positivo, então x.compareTo(z) deve tambem ser positivo.
+:arrow: Se x.compareTo(y) == 0, então deve-se garantir que sinal(x.compareTo(z)) == sinal(y.compareTo(z)), para qualquer valor de z.
+
+o compareTo serve para ordenar um conjunto. Vamos dizer que vc tem uma lista de nomes e quer ordenar essa lista pela idade das pessoas… vc pode usasr o compareTo.
+

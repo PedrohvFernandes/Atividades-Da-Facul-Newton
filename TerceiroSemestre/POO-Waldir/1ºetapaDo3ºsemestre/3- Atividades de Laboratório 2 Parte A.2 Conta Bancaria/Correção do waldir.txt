@@ -1,0 +1,13 @@
+Banco.java:
+
+- _vetorContasBancaria: nome correto da variável deveria ser contas ou contasBancarias
+
+- _vetorCorrentista: nome correto da varíavel deveria ser correntistas
+
+
+Geral:
+
+- identação no código
+
+
+Nota: 4 de 4

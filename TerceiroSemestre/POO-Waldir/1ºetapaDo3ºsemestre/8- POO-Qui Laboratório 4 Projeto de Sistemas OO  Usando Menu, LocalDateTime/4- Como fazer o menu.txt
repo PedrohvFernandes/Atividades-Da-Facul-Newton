@@ -1,0 +1,112 @@
+https://www.javaprogressivo.net/2012/09/aplicativo-menu-simples-usando-metodos.html
+
+Um método para cada opção (inclui, altera, exclui, consulta) e outro método que mostra esse menu de opções.
+
+Como as opções são números, usaremos um tipo inteiro, chamado 'opcao', para receber as opções do usuário.
+
+Como queremos que o menu seja exibido ao menos uma vez, usamos o do...while.
+
+Ao entrar nesse laço, o menu é exibido com o comando 'menu();' que chama o método que exibe o menu.
+Logo após, o programa espera a entrada do usuário. Dependendo do que foi digitado, o método específico - inclui(), altera(), exclui() ou consulta() - é selecionado pelo switch.
+O programa só termina se o usuário digitar 0.
+
+import java.util.Scanner;
+
+public class menu {
+    
+    public static void menu(){
+        System.out.println("\tCadastro de clientes");
+        System.out.println("0. Fim");
+        System.out.println("1. Inclui");
+        System.out.println("2. Altera");
+        System.out.println("3. Exclui");
+        System.out.println("4. Consulta");
+        System.out.println("Opcao:");
+    }
+
+    public static void inclui(){
+        System.out.println("Você entrou no método Inclui.");
+    }
+    
+    public static void altera(){
+        System.out.println("Você entrou no método Altera.");
+    }
+    
+    public static void exclui(){
+        System.out.println("Você entrou no método Exclui.");
+    }
+    
+    public static void consulta(){
+        System.out.println("Você entrou no método Consulta.");
+    }
+    
+    public static void main(String[] args) {
+        int opcao;
+        Scanner entrada = new Scanner(System.in);
+        
+        do{
+            menu();
+            opcao = entrada.nextInt();
+            
+            switch(opcao){
+            case 1:
+                inclui();
+                break;
+                
+            case 2:
+                altera();
+                break;
+                
+            case 3:
+                exclui();
+                break;
+                
+            case 4:
+                consulta();
+                break;
+            
+            default:
+                System.out.println("Opção inválida.");
+            }
+        } while(opcao != 0);
+    }
+}
+
+https://www.guj.com.br/t/criacao-de-menu-em-java-codigo-bruto/66860/3
+
+//  menu principal
+private static void menu() { // menu principal
+	int opcao = 0;
+	do {
+		System.out
+				.println("\n\n### SISCOM - Sistema Comercial de Controle de Compras e Vendas ###");
+		System.out.println("\n                  =========================");
+		System.out.println("                  |     1 - Venda         |");
+		System.out.println("                  |     2 - Vendedor      |");
+		System.out.println("                  |     3 - Compra        |");
+		System.out.println("                  |     4 - Produto       |");
+		System.out.println("                  |     5 - Cliente       |");
+		System.out.println("                  |     6 - Fornecedor    |");
+		System.out.println("                  |     0 - Sair          |");
+		System.out.println("                  =========================\n");
+
+		opcao = Console.readInt("Opção -> ");
+		System.out.print("\n");
+		switch (opcao) {
+		case 1:
+			break;
+		case 2:
+			fornecedor();
+			break;
+                   //case3 , 4  , etc...
+		case 5:
+			cliente();
+			break;
+		case 0:
+			break;
+		default:
+			System.out.println("Opção Inválida!");
+			break;
+		}
+	} while (opcao != 0);
+}
