@@ -64,9 +64,8 @@
   .home-presentation{
     display:flex;
     flex-direction: column;
-    padding: 2em;
-    margin-top: 0.1em;
-    margin-bottom: 0.1em;
+    padding-left: 2em;
+    margin-top: 5em;
   }
 
   .hero-title{
@@ -74,40 +73,31 @@
     color:#fff;
     font-size: 60px;
     display: flex; 
-    margin-top: 0.1em;
-    margin-bottom: 0.1em;
-  }
-
-  .circule{
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    align-self: flex-end;
-    margin-bottom: 8px;
-    background: rgb(202, 3, 3);
-    margin-left: 8px;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
   }
 
   .hero-subtitle{
     font-family:'Courier';
     color:#fff;
     font-size: 50px;
-    margin-top: 0.1em;
-    margin-bottom: 0.1em;
+    margin-top: -0.2em;
+    margin-bottom: 0.2em;
   }
 
-  .descrition-subtititule{
+ .descrition-subtititule{
     font-family:'Courier';
     color:#fff;
     font-size: 30px;
-    margin-top: 0.1em;
-    margin-bottom: 0.1em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
   }
 
   .midias-sociais{
     padding: 2em;
     display: flex;
     align-items: center;
+    margin-top: -1em;
   }
 
   /*A cor foi alterada no proprio arquivo SVG: https://enemaneiras.com.br/2021/03/alterar-cor-svg-via-codigo/*/
@@ -122,11 +112,15 @@
     margin-left: 20px;
   }
 
-  div a{
-    text-decoration: none;
-  }
 
-  div img:hover{
+  .linkedin-home:hover{
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  .icons-home-section:hover{
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
     -o-transform: scale(1.2);
@@ -134,8 +128,72 @@
     transform: scale(1.2);
   }
 
+  div a{
+    text-decoration: none;
+  }
 
+  .programador-fogo{
+    padding: 2em;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -18%;
+    margin-right: 5%;
+  }
+
+  .programador-fogo-imagem{
+    align-self: center;
+  }
   /*Responsividade home*/
+
+
+   /*Style about me*/
+  .subtitle-aboute-me{
+    font-family:'Courier';
+    color:#fff;
+    font-size: 50px;
+    padding-right: 0.5em;
+    margin-top:20%;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .about-me-paragrafo{
+    color:#fff;
+    font-family:'Courier';
+    padding-left: 18em;
+    margin-top: 0.5%;
+    margin-bottom: 12%;
+    font-size: 30px;
+    display: flex;
+    align-items: flex-end;
+    text-align: end;
+    width: 70%;
+  }
+
+  .toasty-mk{
+    padding: -10em;
+    display: flex;
+    margin-top: -25%;
+    height: 200px;
+    width: 200px;
+  }
+
+  /*Responsividade about me*/
+
+
+  /*Style Skills*/
+  .subtitle-skills{
+    color:#fff;
+    font-family:'Courier';
+    margin-top:10%;
+    font-size: 50px;
+  }
+  
+  .itens-skill{
+
+  }
+
+  /*Responsividade skills*/
 
   .icons-skill-section{
   width: 50px;
