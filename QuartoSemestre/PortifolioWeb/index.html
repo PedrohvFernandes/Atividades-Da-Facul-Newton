@@ -5,32 +5,58 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
   <header>
-    <a href="#home">Home</a>
-    <a href="#about-me"> About me </a>
-    <a href="#skills"> Skills </a>
-    <a href="#jobs"> Jobs </a>
-    <a href="#projects"> Projects </a>
-    <a href="https://bit.ly/3loeKbM" target="_blank">Curriculum</a>
-    <!--Ir para uma area com 4 campos: enviar um arquivo das vagas de emprego, contratação, etc para o meu email
-    nome da  pessoa/empresa, o email da pessoa/empresa e um campo explicando sobre a vaga de emprego-->
-    <a href="#enviar-vagas">Enviar vagas</a>
+    <nav class="navegacao-links-cabecalho">
+      <ol class="links">
+        <li class="links-item">
+          <a href="#home">Home</a>
+        </li>
+        <li class="links-item">
+          <a href="#about-me"> About me </a>
+        </li>
+        <li class="links-item">
+          <a href="#skills"> Skills </a>
+        </li>
+        <li class="links-item">
+          <a href="#jobs"> Jobs </a>
+        </li>
+        <li class="links-item">
+          <a href="#projects"> Projects </a>
+        </li>
+        <li class="links-item">
+          <a href="https://bit.ly/3loeKbM" target="_blank">Curriculum</a>
+        </li>
+        <li class="links-item">
+        <!--Ir para uma area com 4 campos: enviar um arquivo das vagas de emprego, contratação, etc para o meu email nome da  pessoa/empresa, o email da pessoa/empresa e um campo explicando sobre a vaga de emprego-->
+        <a href="#enviar-vagas">Enviar vagas</a>
+        </li>
+    </ol>
+  </nav>
   </header>
 
   <main>
     <section class="home-section" id="home">
-      <h2 class="hero-subtitle">Bem vind@ ao meu Portfólio</h2>
+      <h2 class="hero-subtitle">Bem vind@ ao meu portfólio</h2>
       <h1 class="hero-title"> Pedro Vieira </h1>
       <h2 class="hero-subtitle">Estudante de TI</h2>
-      <a href="https://www.linkedin.com/in/pedro-henrique-vieira-fernandes/" target="_blank">IMAGEM DO LINKEDIN</a>
-      <a href="https://github.com/PedrohvFernandes" target="_blank"> IMAGEM DO GIT </a> 
-      <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5533999181843&text=Oi%20Pedro,%20tudo%20bem?!" target="_blank">IMAGEM DO ZAP</a>
-      <!--Abrir a caixa de email-->
-      <a href="" >IMAGEM DO GMAIL</a>
-      <a href="https://www.instagram.com/pedro17fernandes/" target="_blank">IMAGEM DO INSTAGRAM</a>
+      <a href="https://www.linkedin.com/in/pedro-henrique-vieira-fernandes/" target="_blank">
+        <img src="https://cdns.iconmonstr.com/wp-content/assets/preview/2012/240/iconmonstr-linkedin-3.png" alt="Logo do linkedin, i e n modelado internamente de um quadrado preto" class="icons-home-section">
+      </a>
+      <a href="https://github.com/PedrohvFernandes" target="_blank"> 
+        <img src="https://camo.githubusercontent.com/b079fe922f00c4b86f1b724fbc2e8141c468794ce8adbc9b7456e5e1ad09c622/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f6769746875622e737667" alt="Imagem da logo do Github, um gatinho modelado internamente no circulo preto" class="icons-home-section">
+      </a> 
+      <a href="mailto:pedrohv20fernandes@gmail.com?subject=Mensagem enviada do portfólio">
+        <img src="https://cdns.iconmonstr.com/wp-content/assets/preview/2018/240/iconmonstr-gmail-1.png" alt="Logo do gmail, um envolepe, uma cartinha" class="icons-home-section">
+      </a>
+      <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5533999181843&text=Oi%20Pedro,%20tudo%20bem?!" target="_blank">
+        <img src="https://cdns.iconmonstr.com/wp-content/assets/preview/2016/240/iconmonstr-whatsapp-1.png" alt="logo do whatsapp, um telefone modelado internamento no circulo preto, em volta de um circulo" class="icons-home-section">
+      </a>
+      <a href="https://www.instagram.com/pedro17fernandes/" target="_blank">
+        <img src="https://cdns.iconmonstr.com/wp-content/assets/preview/2016/240/iconmonstr-instagram-11.png" alt="Logo do instagram" class="icons-home-section">
+      </a>
     </section>  
 
     <section class="about-me-section" id="about-me">
@@ -50,11 +76,19 @@
     <section class="skills-section"  id="skills">
       <h2 class="subtitle">Skills</h2>
       
-      <ul>
-        <li>HTML - IMAGEM DO LADO</li>
-        <li>CSS - IMAGEM DO LADO</li>
-        <li>JS - IMAGEM DO LADO</li>
-        <li>REACT - IMAGEM DO LADO</li>
+      <ul class="itens-skills">
+        <li class="itens">HTML 
+          <img src="https://camo.githubusercontent.com/72e5df59529a42423d671ba4c02bfb327d917517bfff18595c5e5dc17a5abece/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f68746d6c352e737667" alt="Logo da tecnoliga HTML5" class="icons-skill-section">
+        </li>
+        <li class="itens">CSS 
+          <img src="https://camo.githubusercontent.com/b788527f604d8e727fcc90d721984125bced85c8a1c9f8da69c6c4a3e51df3c5/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f637373332e737667" alt="Logo da tecnologia CSS3"class="icons-skill-section">
+        </li>
+        <li class="itens">JS
+          <img src="https://camo.githubusercontent.com/9496882abd182958bcea4238ab44f7eb8928d7a4144c150f18f6c55ceb9b4490/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f6a6176617363726970742e737667" alt="Logo da linguagem de programação Java Script, js" class="icons-skill-section">
+        </li>
+        <li class="itens">REACT 
+          <img src="https://camo.githubusercontent.com/98ce3f27aec475c03ad0441a7d4092f6b956814c7adc7f0049689dccedb82f1d/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f72656163742e737667" alt="Logo do framework para java script, React" class="icons-skill-section">
+        </li>
       </ul>
 
     </section>

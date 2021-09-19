@@ -1,0 +1,30 @@
+.navegacao-links-cabecalho{
+
+}
+
+.links{
+
+}
+
+.links-item{
+    list-style-type: none;
+    background-color: #f1f1f1;
+    border: 1px solid #d4d4d4;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px 0px 0px 0px;
+    cursor:pointer;
+    text-align: center;
+    box-shadow: 10px 5px 5px slategray;
+}
+.icons-home-section{
+    height: 50px;
+}
+
+.icons-skill-section{
+    height: 50px;
+}
+
+.itens{
+    list-style-type: none;
+}
