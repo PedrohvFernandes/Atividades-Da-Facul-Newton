@@ -9,11 +9,17 @@ body{
 }
 
 /*Estilo Menu*/
-
+header{
+  display:flex;
+}
 .navegacao-links-cabecalho{
   display: flex;
-  justify-content: flex-end;
+  align-self: flex-end;
   background: rgb(8, 8, 8);
+  position: fixed;
+  top:5px;
+  right: 0;
+  opacity: 90%;
 }
 
 .links{
