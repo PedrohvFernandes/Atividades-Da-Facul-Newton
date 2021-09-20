@@ -53,7 +53,7 @@ nav a{
 }
 
 /*Responsividade menu*/
-
+/*
 @media all and (max-width: 800px){
 .links{
   flex-grow: 1;
@@ -68,7 +68,7 @@ nav a{
   width:100%;
   }
 }
-
+*/
 /*Estilo home*/
 .home-presentation{
   display:flex;
