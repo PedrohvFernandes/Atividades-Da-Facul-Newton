@@ -1,6 +1,7 @@
 /*Fundo do site*/
 body{
   background: #333;
+  overflow-x: hidden;
 }
 
 *{
