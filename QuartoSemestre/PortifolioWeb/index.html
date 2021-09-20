@@ -30,7 +30,7 @@
           <a href="https://bit.ly/3loeKbM" target="_blank">Curriculum</a>
         </li>
         <li>
-        <!--Ir para uma area com 4 campos: enviar um arquivo das vagas de emprego, contratação, etc para o meu email nome da  pessoa/empresa, o email da pessoa/empresa e um campo explicando sobre a vaga de emprego-->
+        <!--Ir para uma area com 4 campos: enviar um arquivo das vagas de emprego, contratação, etc para o meu email;  nome da  pessoa/empresa, o email da pessoa/empresa e um campo explicando sobre a vaga de emprego-->
         <a href="#enviar-vagas">Enviar vagas</a>
         </li>
     </ol>
@@ -69,23 +69,24 @@
     </section>  
 
     <section class="about-me-section" id="about-me">
-      <h2 class="subtitle-aboute-me">Prazer Pedro</h2>
-      <p class="about-me-paragrafo"> Estudante de sistema da informação pela Newton Paiva Belo Horizonte.
-        Atualmente não cheguei a ter nem uma conquista no ramo de TI, pois ainda não tive alguma 
-        oportunidade, por isso mesmo estou a procura de um estagio, para conquistar minha 
-        primeira experiência nesse ramo. As minhas qualidades eu sinto que é 
-        gostar muito de aprender tecnologias novas, gostar de testar algo novo, de enfrentar novos 
-        desafios, disposto a aprender. Os meu objetivos no momento é puder encontrar realmente um 
-        estagio, aprimorar minhas hard skil e soft skill, entrar no desenvolvimento web a fundo, 
-        até se tornar um ótimo desenvolvedor. Estou a procura de estagio que me leve as fronteiras do 
-        desenvolvimento Web: Html, Css, JS, React, Angular, etc. 
-      </p>
-      <div class="toasty-mk">
-        <img src="gifs/mk-mortal-kombat.gif" alt="meme do toasty, gritinho do jogo mortal kombat">
+      <div class="about-me-descrition">
+        <h2 class="subtitle-aboute-me">Prazer Pedro</h2>
+        <p class="about-me-paragrafo"> Estudante de sistema da informação pela Newton Paiva Belo Horizonte.
+          Atualmente não cheguei a ter nem uma conquista no ramo de TI, pois ainda não tive alguma 
+          oportunidade, por isso mesmo estou a procura de um estagio, para conquistar minha 
+          primeira experiência nesse ramo. As minhas qualidades eu sinto que é 
+          gostar muito de aprender tecnologias novas, gostar de testar algo novo, de enfrentar novos 
+          desafios, disposto a aprender. Os meu objetivos no momento é puder encontrar realmente um 
+          estagio, aprimorar minhas hard skil e soft skill, entrar no desenvolvimento web a fundo, 
+          até se tornar um ótimo desenvolvedor. Estou a procura de estagio que me leve as fronteiras do 
+          desenvolvimento Web: Html, Css, JS, React, Angular, etc. 
+        </p>
+        <img src="gifs/mk-mortal-kombat.gif" alt="meme do toasty, gritinho do jogo mortal kombat" class="toasty-mk">
       </div>
     </section>
     
     <section class="skills-section"  id="skills">
+     <div class="skills-descrition"> 
       <h2 class="subtitle-skills">Skills</h2>
       
       <ul class="itens-skills">
@@ -102,28 +103,73 @@
           <img src="Icons/Logo React.svg" alt="Logo do framework para java script, React" class="icons-skill-section">
         </li>
       </ul>
-
+    </div>
     </section>
 
     <section class="jobs-section"  id="jobs">
-      <h2 class="subtitle">Jobs</h2>
-      <span>Não possuo experiência profissional</span>
+      <div class="jobs-descrition">
+        <h2 class="subtitle-jobs">Jobs</h2>
+        <span class="span-jobs">Não possuo experiência profissional</span>
+      </div>
     </section>
 
     <section class="projects-section" id="projects">
-      <h2 class="subtitle">Projects</h2>
-      <span>Em breve</span>
+      <div class="projects-descrition">
+        <h2 class="subtitle-projects">Projects</h2>
+        <span class="span-projects">Em breve...</span>
+      </div>
     </section>
 
     <section class="vagas-section" id="enviar-vagas">
-      <h2 class="subtitle"> Enviar vagas </h2>
-      <span>Em breve</span>
+      <div class="titulo-vagas">
+        <h2 class="subtitle-vagas"> Enviar vagas </h2>
+        <span class="span-vagas">
+          Preencha os campos abaixo e clique no botão <em> "Enviar vaga"</em> para enviar a vaga
+        </span>
+      </div>
+        <!--Campos de entrada-->
+        <form action="index.html" method="POST">
+          <fieldset class="grupo">
+            <legend>
+              <span>1</span> Informações basicias
+            </legend>
+            <div class="campo">
+              <label for = "txt-nome"> <strong> Nome pessoal/Nome empresa </strong>
+                <input type = "text" name = "Nome da pessoa ou empresa" id="txt-nome" required/>
+              </label>
+              <label for = "txt-email"> <strong> E-mail pessoal/Email empresa </strong> 
+                <input type = "email" name = "email" id="txt-email" required/> 
+              </label> 
+            </div>
+          </fieldset>
+          <fieldset class="grupo">
+            <legend>
+              <span> 2 </span> Detalhes da vaga
+            </legend>
+            <div class="campo">
+              <label for = "txt-descrition"> <strong>Descrição da vaga </strong>
+                <textarea id = "txt-descrition" name = "descrition" required></textarea>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="grupo">
+            <legend>
+              <span> 3 </span>Enviar arquivo da vaga
+            </legend>
+            <div class="campo">
+              <label for ="arq-vaga"> <strong>Arquivo da vaga</strong>
+                <input id="arq-vaga" type="file" name="arquivo"/> 
+              </label>
+            </div>
+          </fieldset>
+          <button type = "submit" class="botao-enviar"> Enviar vaga </button>
+        </form>
     </section>
 
   </main>
 
   <footer>
-    <p>Todos os direitos reservados à Pedro Vieira</p>
+    <p class="direitos-reservados">Todos os direitos reservados à Pedro Vieira</p>
   </footer>
 </body>
 </html>

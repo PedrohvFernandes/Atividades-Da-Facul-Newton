@@ -1,205 +1,376 @@
-  /*Fundo do site*/
-  body{
-    background: #333;
+/*Fundo do site*/
+body{
+  background: #333;
+}
+
+*{
+  font-family:'Courier';
+}
+
+/*Estilo Menu*/
+
+.navegacao-links-cabecalho{
+  display: flex;
+  justify-content: flex-end;
+  background: rgb(8, 8, 8);
+}
+
+.links{
+  list-style: none;
+  margin:0;
+  padding: 0;
+  display:flex
+}
+
+nav a{
+  text-decoration: none;
+  align-items: center;
+  position: relative;
+  /*Essa propriedade permite deixar um elemento do lado do outro(inline) e ao mesmo tempo setar largura e altura(block)*/
+  display: inline-block;
+  padding: 1em;
+  color: rgb(202, 3, 3);
+  font-size: 120%;
+}
+
+/*Mudança de estado do elemento*/
+  nav a:hover{
+  background-color: #555;
+  color: #fff;
+  border-radius: 15px;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+/*Responsividade menu*/
+
+@media all and (max-width: 800px){
+.links{
+  flex-grow: 1;
+  justify-content: space-between;
   }
+}
 
-  /*Estilo Menu*/
-
-  .navegacao-links-cabecalho{
-    display: flex;
-    justify-content: flex-end;
-    background: rgb(8, 8, 8);
+@media all and (max-width: 600px){
+.links{
+  flex-direction: column;
+  align-items: center;
+  width:100%;
   }
+}
 
-  .links{
-    list-style: none;
-    margin:0;
-    padding: 0;
-    display:flex
-  }
+/*Estilo home*/
+.home-presentation{
+  display:flex;
+  flex-direction: column;
+  padding-left: 2em;
+  margin-top: 5em;
+}
 
-  nav a{
-    text-decoration: none;
-    align-items: center;
-    position: relative;
-    /*Essa propriedade permite deixar um elemento do lado do outro(inline) e ao mesmo tempo setar largura e altura(block)*/
-    display: inline-block;
-    padding: 1em;
-    color: rgb(202, 3, 3);
-    font-size: 120%;
-    font-family:'Courier New'
+.hero-title{
+  color:#fff;
+  font-size: 60px;
+  display: flex; 
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
 
-  }
+.hero-subtitle{
+  color:#fff;
+  font-size: 50px;
+  margin-top: -0.2em;
+  margin-bottom: 0.2em;
+}
 
-  /*Mudança de estado do elemento*/
-    nav a:hover{
-    background-color: #555;
-    color: #fff;
-    border-radius: 15px;
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-  }
+.descrition-subtititule{
+  color:#fff;
+  font-size: 30px;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
 
-  /*Responsividade menu*/
+.midias-sociais{
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  margin-top: -1em;
+}
 
-  @media all and (max-width: 800px){
-    .links{
-    flex-grow: 1;
-    justify-content: space-between;
-    }
-  }
-
-  @media all and (max-width: 600px){
-    .links{
-    flex-direction: column;
-    align-items: center;
-    width:100%;
-    }
-  }
-
-  /*Estilo home*/
-  .home-presentation{
-    display:flex;
-    flex-direction: column;
-    padding-left: 2em;
-    margin-top: 5em;
-  }
-
-  .hero-title{
-    font-family:'Courier';
-    color:#fff;
-    font-size: 60px;
-    display: flex; 
-    margin-top: 0.2em;
-    margin-bottom: 0.2em;
-  }
-
-  .hero-subtitle{
-    font-family:'Courier';
-    color:#fff;
-    font-size: 50px;
-    margin-top: -0.2em;
-    margin-bottom: 0.2em;
-  }
-
- .descrition-subtititule{
-    font-family:'Courier';
-    color:#fff;
-    font-size: 30px;
-    margin-top: 0.2em;
-    margin-bottom: 0.2em;
-  }
-
-  .midias-sociais{
-    padding: 2em;
-    display: flex;
-    align-items: center;
-    margin-top: -1em;
-  }
-
-  /*A cor foi alterada no proprio arquivo SVG: https://enemaneiras.com.br/2021/03/alterar-cor-svg-via-codigo/*/
-  .linkedin-home{
-    width: 50px;
-    height: 50px;
-  }
-
-  .icons-home-section{
-    width: 50px;
-    height: 50px;
-    margin-left: 20px;
-  }
-
-
-  .linkedin-home:hover{
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-  .icons-home-section:hover{
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-
-  div a{
-    text-decoration: none;
-  }
-
-  .programador-fogo{
-    padding: 2em;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: -18%;
-    margin-right: 5%;
-  }
-
-  .programador-fogo-imagem{
-    align-self: center;
-  }
-  /*Responsividade home*/
-
-
-   /*Style about me*/
-  .subtitle-aboute-me{
-    font-family:'Courier';
-    color:#fff;
-    font-size: 50px;
-    padding-right: 0.5em;
-    margin-top:20%;
-    display: flex;
-    flex-direction: row-reverse;
-  }
-
-  .about-me-paragrafo{
-    color:#fff;
-    font-family:'Courier';
-    padding-left: 18em;
-    margin-top: 0.5%;
-    margin-bottom: 12%;
-    font-size: 30px;
-    display: flex;
-    align-items: flex-end;
-    text-align: end;
-    width: 70%;
-  }
-
-  .toasty-mk{
-    padding: -10em;
-    display: flex;
-    margin-top: -25%;
-    height: 200px;
-    width: 200px;
-  }
-
-  /*Responsividade about me*/
-
-
-  /*Style Skills*/
-  .subtitle-skills{
-    color:#fff;
-    font-family:'Courier';
-    margin-top:10%;
-    font-size: 50px;
-  }
-  
-  .itens-skill{
-
-  }
-
-  /*Responsividade skills*/
-
-  .icons-skill-section{
+/*A cor foi alterada no proprio arquivo SVG: https://enemaneiras.com.br/2021/03/alterar-cor-svg-via-codigo/*/
+.linkedin-home{
   width: 50px;
   height: 50px;
+}
+
+.icons-home-section{
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+}
+
+
+.linkedin-home:hover{
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.icons-home-section:hover{
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+div a{
+  text-decoration: none;
+}
+
+.programador-fogo{
+  padding: 2em;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -18%;
+  margin-right: 5%;
   }
 
-  .itens{
+.programador-fogo-imagem{
+  align-self: center;
+}
+/*Responsividade home*/
+
+
+/*Style about me*/
+.about-me-descrition{
+  display:flex;
+  flex-direction: column;
+  padding-right: 2em;
+  margin-top:18%;
+  margin-bottom: 10%;
+}
+
+.subtitle-aboute-me{
+  color:#fff;
+  font-size: 50px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.about-me-paragrafo{
+  color:#fff;
+  padding-left: 18em;
+  font-size: 30px;
+  text-align: end;
+  width: 70%;
+  margin-top: -1%;
+}
+
+.toasty-mk{
+  padding: -10em;
+  margin-top: -18%;
+  height: 200px;
+  width: 200px;
+}
+
+/*Responsividade about me*/
+
+
+/*Style Skills*/
+.skills-descrition{
+  padding-left: 2em;
+  margin-bottom: 10%;
+  margin-top:10%;
+  margin-bottom: 10%;
+}
+
+.subtitle-skills{
+  color:#fff;
+  font-size: 50px;
+}
+
+.itens{
   list-style-type: none;
-  }
+  color: #fff;
+  font-size: 30px;
+  display: inline-block;
+  margin-top: -2%;
+}
+
+.icons-skill-section{
+  width: 50px;
+  height: 50px;
+  margin-left:1em;
+  margin-right: 1em;
+  margin-bottom: -2em;
+  padding: 1em;
+  display: inline-block;
+}
+
+.icons-skill-section:hover{
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+
+/*Responsividade skills*/
+
+/*Style Jobs*/
+.jobs-descrition{
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  margin-top:10%;
+  margin-bottom: 10%;
+}
+
+.subtitle-jobs{
+  color:#fff;
+  font-size: 50px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.span-jobs{
+  color:#fff;
+  padding-left: 18em;
+  font-size: 30px;
+  text-align: end;
+  margin-top: -1%;
+}
+
+/*Responsividade jobs*/
+
+
+/*Style projects*/
+.projects-descrition{
+  padding-left: 2em;
+  margin-bottom: 10%;
+  margin-top:10%;
+  margin-bottom: 10%;
+}
+
+.subtitle-projects{
+  color:#fff;
+  font-size: 50px;
+}
+
+.span-projects{
+  color:#fff;
+  font-size: 30px;
+  margin-top: -1%;
+}
+
+/*responsividade projects*/
+
+
+/*Style vagas*/
+form{
+  margin:2em;
+  padding: 0;
+}
+.titulo-vagas{
+  display: flex;
+  flex-direction: column;
+}
+.subtitle-vagas{
+  color:#fff;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.span-vagas{
+  color:#fff;
+  font-size: 30px;
+  margin-top: -1%;
+  display: flex;
+  justify-content: center;
+}
+
+fieldset{
+  border: 0;
+}
+
+input, textarea, button{
+  border: 5px;
+}
+legend{
+ color: #fff;
+ font-size: 30px;
+}
+.campo{
+  margin-bottom: 1em;
+}
+
+.campo label{
+  margin-bottom: 0.2em;
+  color: #fff;
+  font-size: 20px;
+}
+
+.campo label:hover{
+  color: rgb(202, 3, 3);
+}
+
+fieldset.grupo .campo{
+  margin-left: 2em;
+  
+}
+
+.campo input[type="text"], .campo input[type="email"], .campo textarea{
+  padding: 0.2em;
+  border: 1px solid rgb(202, 3, 3);
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgb(202, 3, 3);
+  display: flex;
+  flex-direction: column;
+}
+
+.campo input:focus, .campo textarea:focus{
+  background: rgb(138, 135, 135);
+}
+
+.botao-enviar{
+  font-size: 1.2em;
+  background: #fff;
+  border: 0;
+  margin-bottom: 1em;
+  color: rgb(202, 3, 3);
+  padding: 0.2em 0.6em;
+  margin-left: 2em;
+  box-shadow: 2px 2px 2px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  top:90%;
+  left: 90%;
+  margin-right: -50%;
+  
+}
+
+.botao-enviar:hover{
+  background: rgb(202, 3, 3);
+  color: #fff;
+  box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+  text-shadow: none;
+}
+
+/*Responsividade vagas*/
+
+/*Style footer*/
+ footer{
+   color:#fff;
+   text-align: center;
+   font-size: 15px;
+   padding: 0.2em;
+   box-shadow: 2px 2px 2px rgb(202, 3, 3);
+   width: 21.5%;
+   margin-left: 78%;
+ }
+/*Responsividade footer*/
