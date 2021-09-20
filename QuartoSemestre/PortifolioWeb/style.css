@@ -351,13 +351,32 @@ fieldset.grupo .campo{
   margin-left: 2em;
   box-shadow: 2px 2px 2px;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-  top:90%;
-  left: 90%;
   margin-right: -50%;
   
 }
 
 .botao-enviar:hover{
+  background: rgb(202, 3, 3);
+  color: #fff;
+  box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+  text-shadow: none;
+}
+
+.botao-apagar{
+  font-size: 1.2em;
+  background: #fff;
+  border: 0;
+  margin-bottom: 1em;
+  color: rgb(202, 3, 3);
+  padding: 0.2em 0.6em;
+  margin-left: 2em;
+  box-shadow: 2px 2px 2px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  margin-left: 50%;
+  
+}
+
+.botao-apagar:hover{
   background: rgb(202, 3, 3);
   color: #fff;
   box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
