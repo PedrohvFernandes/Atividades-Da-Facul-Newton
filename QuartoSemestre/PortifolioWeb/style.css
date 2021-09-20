@@ -1,30 +1,147 @@
-.navegacao-links-cabecalho{
+  /*Fundo do site*/
+  body{
+    background: #333;
+  }
 
-}
+  /*Estilo Menu*/
 
-.links{
+  .navegacao-links-cabecalho{
+    display: flex;
+    justify-content: flex-end;
+    background: rgb(8, 8, 8);
+  }
 
-}
+  .links{
+    list-style: none;
+    margin:0;
+    padding: 0;
+    display:flex
+  }
 
-.links-item{
-    list-style-type: none;
-    background-color: #f1f1f1;
-    border: 1px solid #d4d4d4;
-    padding: 10px;
-    border-radius: 20px;
-    margin: 10px 0px 0px 0px;
-    cursor:pointer;
-    text-align: center;
-    box-shadow: 10px 5px 5px slategray;
-}
-.icons-home-section{
+  nav a{
+    text-decoration: none;
+    align-items: center;
+    position: relative;
+    /*Essa propriedade permite deixar um elemento do lado do outro(inline) e ao mesmo tempo setar largura e altura(block)*/
+    display: inline-block;
+    padding: 1em;
+    color: rgb(202, 3, 3);
+    font-size: 120%;
+    font-family:'Courier New'
+
+  }
+
+  /*Mudança de estado do elemento*/
+    nav a:hover{
+    background-color: #555;
+    color: #fff;
+    border-radius: 15px;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  /*Responsividade menu*/
+
+  @media all and (max-width: 800px){
+    .links{
+    flex-grow: 1;
+    justify-content: space-between;
+    }
+  }
+
+  @media all and (max-width: 600px){
+    .links{
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    }
+  }
+
+  /*Estilo home*/
+  .home-presentation{
+    display:flex;
+    flex-direction: column;
+    padding: 2em;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+  }
+
+  .hero-title{
+    font-family:'Courier';
+    color:#fff;
+    font-size: 60px;
+    display: flex; 
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+  }
+
+  .circule{
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    align-self: flex-end;
+    margin-bottom: 8px;
+    background: rgb(202, 3, 3);
+    margin-left: 8px;
+  }
+
+  .hero-subtitle{
+    font-family:'Courier';
+    color:#fff;
+    font-size: 50px;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+  }
+
+  .descrition-subtititule{
+    font-family:'Courier';
+    color:#fff;
+    font-size: 30px;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+  }
+
+  .midias-sociais{
+    padding: 2em;
+    display: flex;
+    align-items: center;
+  }
+
+  /*A cor foi alterada no proprio arquivo SVG: https://enemaneiras.com.br/2021/03/alterar-cor-svg-via-codigo/*/
+  .linkedin-home{
+    width: 50px;
     height: 50px;
-}
+  }
 
-.icons-skill-section{
+  .icons-home-section{
+    width: 50px;
     height: 50px;
-}
+    margin-left: 20px;
+  }
 
-.itens{
-    list-style-type: none;
-}
+  div a{
+    text-decoration: none;
+  }
+
+  div img:hover{
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+
+  /*Responsividade home*/
+
+  .icons-skill-section{
+  width: 50px;
+  height: 50px;
+  }
+
+  .itens{
+  list-style-type: none;
+  }
