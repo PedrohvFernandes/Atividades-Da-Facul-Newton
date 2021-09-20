@@ -184,7 +184,7 @@ div a{
 .skills-descrition{
   padding-left: 2em;
   margin-bottom: 10%;
-  margin-top:10%;
+  margin-top:15%;
   margin-bottom: 10%;
 }
 
@@ -227,7 +227,7 @@ div a{
   padding: 2em;
   display: flex;
   flex-direction: column;
-  margin-top:10%;
+  margin-top:15%;
   margin-bottom: 10%;
 }
 
@@ -253,7 +253,7 @@ div a{
 .projects-descrition{
   padding-left: 2em;
   margin-bottom: 10%;
-  margin-top:10%;
+  margin-top:15%;
   margin-bottom: 10%;
 }
 
@@ -272,10 +272,7 @@ div a{
 
 
 /*Style vagas*/
-form{
-  margin:2em;
-  padding: 0;
-}
+
 .titulo-vagas{
   display: flex;
   flex-direction: column;
@@ -285,6 +282,7 @@ form{
   font-size: 50px;
   display: flex;
   justify-content: center;
+  margin-top: 15%;
 }
 
 .span-vagas{
@@ -293,6 +291,11 @@ form{
   margin-top: -1%;
   display: flex;
   justify-content: center;
+}
+
+form{
+  margin:2em;
+  padding: 0;
 }
 
 fieldset{
