@@ -122,6 +122,7 @@ nav a:hover{
   justify-content: flex-start;
 }
 
+
 .linkedin-home:hover{
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
@@ -175,9 +176,6 @@ div a{
 }
 
 .about-me-paragrafo{
-  display: flex;
-  flex-direction: column;
-  align-self:flex-end;
   color:#fff;
   font-size: 30px;
   width: 70%;
@@ -186,8 +184,6 @@ div a{
 
 .toasty-mk{
   margin-top: -3%;
-  flex-direction: column;
-  align-self: flex-start;
   height: 400px;
   width: 400px;
 }
@@ -196,7 +192,6 @@ div a{
 @media(max-width:1450px){
 
   .subtitle-aboute-me{
-    display: flex;
     justify-content: center;
     padding: 1em;
     margin-top: 5%;
@@ -208,8 +203,6 @@ div a{
     align-items: flex-end;
   }
   .about-me-paragrafo{
-    display: flex;
-    flex-direction: column;
     align-self: flex-start;
   }
 
@@ -217,8 +210,7 @@ div a{
     margin-top: 0px;
     height: 300px;
     width: 300px;
-    flex-direction: column;
-    align-items: flex-end;
+    align-self: flex-start;
   }
 
 }
@@ -232,9 +224,6 @@ div a{
 .subtitle-skills{
   color:#fff;
   font-size: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 .itens{
@@ -299,14 +288,11 @@ div a{
 .subtitle-jobs{
   color:#fff;
   font-size: 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  align-self: flex-end;
 }
 
 .span-jobs{
-  display: flex;
-  justify-content: flex-end;
+  align-self: flex-end;
   color:#fff;
   font-size: 30px;
   margin-top: -1%;
@@ -316,15 +302,14 @@ div a{
 @media(max-width:1450px){
   .subtitle-jobs{
     justify-content: center;
+    align-self: flex-start;
   }
 
   .jobs-descrition{
     padding: 1em;
   }
   .span-jobs{
-    display: flex;
-    justify-content:flex-start;
-    
+    align-self: flex-end;
   }
 }
 
@@ -338,16 +323,12 @@ div a{
 .subtitle-projects{
   color:#fff;
   font-size: 50px;
-  display:flex;
-  justify-content: flex-start;
 }
 
 .span-projects{
   color:#fff;
   font-size: 30px;
   margin-top: -1%;
-  display:flex;
-  justify-content: flex-start;
 }
 
 /*responsividade projects*/
