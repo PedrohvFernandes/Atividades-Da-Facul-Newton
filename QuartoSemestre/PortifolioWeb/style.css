@@ -73,6 +73,7 @@ nav a:hover{
   flex-direction: column;
   align-content: flex-start;
   align-items: flex-start;
+  max-width: 950px;
   padding-left: 2em;
   margin-top: 10em;
 }
@@ -80,7 +81,6 @@ nav a:hover{
 .hero-title{
   color:#fff;
   font-size: 60px;
-  display: flex;
   margin-top: 0.2em;
   margin-bottom: 0.2em;
 }
@@ -104,6 +104,7 @@ nav a:hover{
   display: flex;
   justify-content: flex-start;
   margin-top: -1em;
+  max-width: 400px;
 }
 
 /*A cor foi alterada no proprio arquivo SVG: https://enemaneiras.com.br/2021/03/alterar-cor-svg-via-codigo/*/
