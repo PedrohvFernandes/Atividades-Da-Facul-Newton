@@ -69,14 +69,13 @@ nav a:hover{
 }
 
 /*Estilo home*/
+.home-section{
+  display: flex;
+
+}
 .encapsulamento-home-section-div{
   display: flex;
   flex-direction: column;
-
-}
-
-.home-section{
-  display: flex;
 }
 .div-programador{
   align-self: flex-end;
@@ -160,23 +159,28 @@ div a{
 /*Responsividade home*/
 @media(max-width:1450px){
   .home-presentation{
-    margin-top: 2em;
-    padding: 1em;
+    margin-top: 0em;
+    padding: 0em;
   }
   .midias-sociais{
-    flex-wrap: wrap;
-    padding:1em;
+    padding:0em;
     align-self: flex-start;
+    margin-top: 1em;
+    flex-wrap: wrap;
   }
 
   .linkedin-home{
     width: 40px;
     height: 40px;
   }
+  .encapsulamento-home-section-div{
+    align-self: flex-start;
+    
+  }
   .home-section{
     flex-direction: column;
+    align-items: flex-start;
     overflow-x: hidden;
-    width: auto;
   }
   .div-programador{
     align-self: center;
@@ -222,7 +226,7 @@ div a{
   }
 
   .about-me-descrition{
-    padding: 1em;
+    padding: 0em;
     flex-direction: column;
     align-items: flex-end;
   }
@@ -330,7 +334,7 @@ div a{
   }
 
   .jobs-descrition{
-    padding: 1em;
+    padding: 0em;
   }
   .span-jobs{
     align-self: flex-start;
@@ -363,7 +367,7 @@ div a{
   }
 
   .projects-descrition{
-    padding: 1em;
+    padding: 0em;
   }
 }
 
@@ -383,6 +387,8 @@ div a{
   color:#fff;
   font-size: 30px;
   margin-top: -1%;
+  padding: 0;
+  align-self: center;
 }
 
 form{
@@ -444,7 +450,7 @@ fieldset.grupo .campo{
   box-shadow: 2px 2px 2px;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
   margin-right: -50%;
-  
+ 
 }
 
 .botao-enviar:hover{
