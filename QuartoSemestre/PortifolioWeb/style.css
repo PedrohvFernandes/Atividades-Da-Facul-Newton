@@ -9,7 +9,8 @@ body{
   font-family:'Courier';
 }
 
-section{
+
+.about-me-section, .skills-section, .jobs-section, .projects-section, .vagas-section{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,6 +69,19 @@ nav a:hover{
 }
 
 /*Estilo home*/
+.encapsulamento-home-section-div{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.home-section{
+  display: flex;
+}
+.div-programador{
+  align-self: flex-end;
+  margin-left: 30px;
+}
 .home-presentation{
   display:flex;
   flex-direction: column;
@@ -150,14 +164,23 @@ div a{
     padding: 1em;
   }
   .midias-sociais{
+    flex-wrap: wrap;
     padding:1em;
+    align-self: flex-start;
   }
 
   .linkedin-home{
     width: 40px;
     height: 40px;
   }
-
+  .home-section{
+    flex-direction: column;
+    overflow-x: hidden;
+    width: auto;
+  }
+  .div-programador{
+    align-self: center;
+  }
 
 }
 
