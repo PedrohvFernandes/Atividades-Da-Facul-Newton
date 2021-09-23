@@ -110,16 +110,16 @@ nav a:hover{
 .linkedin-home{
   width: 50px;
   height: 50px;
-  display:flex;
-  justify-content: flex-start;
 }
 
 .icons-home-section{
   width: 50px;
   height: 50px;
   margin-left: 20px;
-  display: flex;
-  justify-content: flex-start;
+}
+
+.telefone:hover{
+  color:rgb(202, 3, 3);
 }
 
 
@@ -309,7 +309,7 @@ div a{
     padding: 1em;
   }
   .span-jobs{
-    align-self: flex-end;
+    align-self: flex-start;
   }
 }
 
