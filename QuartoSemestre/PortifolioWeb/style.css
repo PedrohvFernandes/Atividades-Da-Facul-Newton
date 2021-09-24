@@ -10,7 +10,7 @@ body{
 }
 
 
-.about-me-section, .skills-section, .jobs-section, .projects-section, .vagas-section{
+.about-me-section, .skills-section, .jobs-section, .projects-section, .vagas-section, .recomendacoes-section, .clientes-section{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -173,6 +173,10 @@ div a{
     width: 40px;
     height: 40px;
   }
+  .icons-home-section{
+    width: 40px;
+    height: 40px;
+  }
   .encapsulamento-home-section-div{
     align-self: flex-start;
     
@@ -228,17 +232,12 @@ div a{
   .about-me-descrition{
     padding: 0em;
     flex-direction: column;
-    align-items: flex-end;
-  }
-  .about-me-paragrafo{
-    align-self: flex-start;
   }
 
   .toasty-mk{
     margin-top: 0px;
     height: 300px;
     width: 300px;
-    align-self: flex-start;
   }
 
 }
@@ -292,17 +291,18 @@ div a{
 @media(max-width:1450px){
   .skills-descrition{
     align-items: center;
+    padding: 0;
+    margin:0
   }
   .itens{
     font-size: 30px;
-  }
-  .icons-home-section{
-    width: 40px;
-    height: 40px;
+    padding: 0;
+    margin:0
   }
   .itens-skills{
     flex-direction: column;
-    align-content: center;
+    padding: 0;
+    margin:0
   }
 }
 
@@ -329,8 +329,7 @@ div a{
 /*Responsividade jobs*/
 @media(max-width:1450px){
   .subtitle-jobs{
-    justify-content: center;
-    align-self: flex-start;
+    align-self: center;
   }
 
   .jobs-descrition{
@@ -351,6 +350,7 @@ div a{
 .subtitle-projects{
   color:#fff;
   font-size: 50px;
+  
 }
 
 .span-projects{
@@ -362,23 +362,147 @@ div a{
 /*responsividade projects*/
 @media(max-width:1450px){
   .subtitle-projects{
-    display:flex;
-    justify-content: center;
+    align-self: center;
+    padding: 0;
   }
 
   .projects-descrition{
     padding: 0em;
   }
 }
+/* Style recomendações */
+.recomendacoes-descrition{
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+padding-right: 2em;
+}
+
+.subtitle-recomendacoes{
+color:#fff;
+font-size: 50px;
+}
+
+.span-recomendacoes{
+  color:#fff;
+  font-size: 30px;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  width: 50%;
+  
+}
+/* Reponsa recomendações */
+@media(max-width:1450px){
+  .recomendacoes-descrition{
+    padding: 0;
+    align-items: flex-start;
+  }
+  .span-recomendacoes{
+    width:50%;
+  }
+  .subtitle-recomendacoes{
+    align-self: center;
+  }
+}
+/* Style clientes */
+body #items-wrapper{
+  display: grid;
+  place-items: center;
+  margin-left: 2em;
+  padding: 0;
+  box-sizing: border-box;
+}
+#items-wrapper{
+  width: 50vw;
+}
+
+#items{
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+
+}
+
+.item{
+  flex:none;
+
+  width: 100%;
+  height: 400px;
+
+  scroll-snap-align: start;
+
+  pointer-events: none;
+}
+
+.item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.clientes-descrition{
+  display: flex;
+  align-items: flex-start;
+  margin-left: 2em;
+}
+.subtitle-clientes{
+  color:#fff;
+  font-size: 50px;
+}
+
+/*Responsivo clientes*/
+@media(max-width:640px){
+  #items-wrapper{
+    width: 88vw;
+  }
+  .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .clientes-descrition{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+}
+
+@media(max-width:411px){
+  #items-wrapper{
+    width: 80vw;
+  }
+  .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .subtitle-clientes{
+    align-self: center;
+  }
+}
+@media(max-width:360px){
+  #items-wrapper{
+    width: 90vw;
+  }
+}
+@media(max-width:306px){
+  #items-wrapper{
+    width: 115vw;
+  }
+  
+}
+
 
 /*Style vagas*/
 
-.titulo-vagas{
+.div-vagas-titulos{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.subtitle-vagas{
+.titulo-vagas{
   color:#fff;
   font-size: 50px;
 }
@@ -433,6 +557,8 @@ fieldset.grupo .campo{
   box-shadow: 2px 2px 2px rgb(202, 3, 3);
   display: flex;
   flex-direction: column;
+  height: 35px;
+  width: 330px;
 }
 
 .campo input:focus, .campo textarea:focus{
@@ -449,8 +575,7 @@ fieldset.grupo .campo{
   margin-left: 2em;
   box-shadow: 2px 2px 2px;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-  margin-right: -50%;
- 
+  cursor: pointer;
 }
 
 .botao-enviar:hover{
@@ -470,8 +595,7 @@ fieldset.grupo .campo{
   margin-left: 2em;
   box-shadow: 2px 2px 2px;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-  margin-left: 50%;
-  
+  cursor: pointer;
 }
 
 .botao-apagar:hover{
@@ -483,25 +607,18 @@ fieldset.grupo .campo{
 
 /*Responsividade vagas*/
 @media(max-width:1450px){
-  .titulo-vagas{
-    padding: 1em;
-  }
-  .subtitle-vagas{
-    display: flex;
-    justify-content: center;
-    padding: 1em;
-    text-align: center;
-  }
-
-  .campo{
-    margin-bottom: 1em;
-  }
   .campo input[type="text"], .campo input[type="email"], .campo textarea{
-    margin: 1em;
+    height: 35px;
+    width: 235px;
+  }
+  .campo textarea{
+    resize: vertical
   }
 
   .campo input[type="file"]{
     width: 90%;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 
   legend{
@@ -515,10 +632,10 @@ fieldset.grupo .campo{
   }
   
   .botao-apagar{
-  margin-left: 5%;
   display: flex;
   justify-content: center;
   }
+
 }
 
 /*Style footer*/
@@ -534,5 +651,6 @@ fieldset.grupo .campo{
 @media(max-width:1450px){
   footer{
     font-size: 13px;
+    overflow-x: hidden;
   }
 }
