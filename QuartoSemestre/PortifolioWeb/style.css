@@ -450,10 +450,8 @@ body #items-wrapper{
 #items-wrapper{
   width: 88vw;
 }
-.clientes-descrition{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.subtitle-clientes{
+  align-self: center;
 }
 }
 
@@ -469,12 +467,17 @@ body #items-wrapper{
   #items-wrapper{
   width: 90vw;
   }
+  .subtitle-clientes{
+    align-self: center;
+  }
 }
 @media(max-width:306px){
   #items-wrapper{
   width: 115vw;
   }
-
+  .subtitle-clientes{
+    align-self: center;
+  }
 }
 
 
