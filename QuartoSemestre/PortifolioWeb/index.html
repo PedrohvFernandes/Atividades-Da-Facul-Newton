@@ -168,6 +168,13 @@
       </div>
     </section>
 
+    <!-- Use o Formspree para teste e desenvolvimento com projetos e formulários ilimitados, limitados a 50 envios / mês:
+    Por enquanto usa uma api do formspree: <form autocomplete="off" method="POST" action="https://formspree.io/f/mdoybrwl">
+    https://www.youtube.com/watch?v=L-hD-Lj5CIc
+    
+    Com arquivo precisa de um plano:   
+    <form autocomplete="off" method="POST" action="https://formspree.io/f/mdoybrwl" enctype="multipart/form-data"> 
+    -->
     <section class="vagas-section" id="enviar-vagas">
       <div class="div-vagas-titulos">
         <h2 class="titulo-vagas"> Enviar vagas </h2>
@@ -176,7 +183,7 @@
         </span>
       </div>
         <!--Campos de entrada-->
-        <form autocomplete="off"> 
+        <form autocomplete="off" method="POST" action="https://formspree.io/f/mdoybrwl" enctype="multipart/form-data">
           <fieldset class="grupo">
             <legend>
               <span>1</span> Informações basicias

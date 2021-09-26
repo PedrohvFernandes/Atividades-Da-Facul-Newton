@@ -434,6 +434,12 @@ body #items-wrapper{
   pointer-events: none;
 }
 
+.item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .clientes-descrition{
   display: flex;
   flex-direction: column;
@@ -444,7 +450,6 @@ body #items-wrapper{
   color:#fff;
   font-size: 50px;
 }
-
 /*Responsivo clientes*/
 @media(max-width:640px){
 #items-wrapper{
@@ -468,16 +473,16 @@ body #items-wrapper{
   width: 90vw;
   }
   .subtitle-clientes{
-    align-self: center;
-  }
+  align-self: center;
+}
 }
 @media(max-width:306px){
   #items-wrapper{
   width: 115vw;
   }
-  .subtitle-clientes{
-    align-self: center;
-  }
+.subtitle-clientes{
+  align-self: center;
+}
 }
 
 
