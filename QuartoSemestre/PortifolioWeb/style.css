@@ -249,17 +249,22 @@ div a{
   }
 .encapsulamento-home-section-div{
   align-self: flex-start;
-
   }
 .home-section{
   flex-direction: column;
   align-items: flex-start;
-  overflow-x: hidden;
+  
   }
 .div-programador{
   align-self: center;
+  margin-left: 0;
+  width: 100%;
   }
-
+  
+.div-programador img{
+  width: 100%;
+  object-fit: cover;
+ }
 }
 
 /*Style about me*/
