@@ -531,7 +531,7 @@ body #items-wrapper{
   width: 102%;
 }
 
-.subtitle-clientes{
+.clientes-descrition{
   align-self: center;
 }
 }
@@ -540,38 +540,41 @@ body #items-wrapper{
 #items-wrapper{
   width: 80vw;
 }
-.subtitle-clientes{
+
+.clientes-descrition{
   align-self: center;
 }
-}
-@media(max-width:360px){
-  #items-wrapper{
-  width: 80vw;
-  }
 
-  .item{
-    width: 102%;
-  }
+}
 
-  .subtitle-clientes{
-  align-self: center;
-}
-}
 @media(max-width:306px){
   #items-wrapper{
   width: 115vw;
   }
   
   .item{
-    width: 102%;
+  width: 102%;
   }
 
-.subtitle-clientes{
-  align-self: center;
-}
+  .clientes-descrition{
+    align-self: center;
+  }
 }
 
+@media(max-width:280px){
+  #items-wrapper{
+    width: 75vw;
+    }
+    
+  .item{
+    width: 102%;
+    }
 
+  .clientes-descrition{
+    align-self: center;
+    margin-left: 0.5em;
+    }
+}
 /*Style vagas*/
 
 .div-vagas-titulos{
@@ -715,7 +718,20 @@ legend{
 }
 
 }
-
+@media(max-width:280px){
+  form{
+    margin:0em;
+    padding: 0;
+  }
+  .campo input[type="text"], .campo input[type="email"], .campo textarea{
+    height: 35px;
+    width: 205px;
+  }
+  .div-vagas-titulos{
+    margin-bottom: 2em;
+    text-align: center;
+  }
+}
 /*Style footer*/
 footer{
   display: flex;
