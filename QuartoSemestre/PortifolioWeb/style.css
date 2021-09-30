@@ -802,6 +802,8 @@ footer{
   color:#fff;
   font-size: 15px;
   padding: 0.2em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
   box-shadow: 2px 2px 2px rgb(202, 3, 3);
 }
 /*Responsividade footer*/
@@ -809,7 +811,5 @@ footer{
   footer{
     font-size: 13px;
     overflow-x: hidden;
-    width: 97vw;
-    margin-bottom: 0.5em;
 }
 }
