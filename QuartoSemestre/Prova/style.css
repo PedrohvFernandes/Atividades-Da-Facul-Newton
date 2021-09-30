@@ -181,6 +181,7 @@ form{
   
   .campo input:focus, textarea:focus{
     background: rgb(228, 225, 225);
+    outline: none;
   }
   
   .botao-mensagem{
