@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+
+}
+.imagem-cacador{
+    height: 400px;
+}
+
+.cacador{
+    width: 100%;
+    height: 400px;
+}
+
+.div-intro-container{
+    display: flex;
+    margin-top: 2em;
+    justify-content: space-evenly;
+}
+
+.container-avatar{
+    align-self: center;
+}
+
+.avatar{
+    width: 250px;
+    border-radius: 100%;
+}
+
+.intro-sobre{
+    display:flex;
+    flex-direction: column;
+    width: 40%;
+    padding-left: 2em;
+}
+
+.sobre-h1{
+    color:black;
+    font-size: 50px;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.span-sobre{
+    color: black;
+    font-size: 25px;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.div-info-span{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 2em;
+}
+
+.intro-info{
+    color: black;
+    font-size: 25px;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.blue-strong{
+    color: rgb(4, 152, 251);
+}
+
+.meus-trabalhos-container{
+    padding-left: 2em;
+    margin-top: 2em;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.meus-trabalhos-h1{
+    color: black;
+    font-size: 50px;
+    width: 35%;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.div-explicacao{
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+}
+
+.titulo-explicacao{
+    margin-bottom: 0.5em;
+    font-size: 40px;
+}
+
+.div-trabalhos{
+    display: flex;
+}
+
+.explicacao-trabalho{
+    color: black;
+    font-size: 25px;
+    width: 70%;
+}
+
+.container-contatos{
+    padding-left: 2em;
+    margin-top: 2em;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.title-contatos{
+    font-size: 50px;
+}
+
+form{
+    margin:0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  fieldset{
+    border: 0;
+  }
+  
+  input, button{
+    border: 5px;
+  }
+
+  .campo{
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .div-nome-email{
+    margin-top: 2em;
+  }
+
+  .div-nome-email input[type="text"], input[type="email"]{
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  .campo label{
+    margin-bottom: 0.5em;
+    margin-top: 1em;
+    align-self: flex-start;
+    color: #4F4F4F;
+    font-size: 21px;
+    font-family: 'HelveticaNeue';
+  }
+  
+  .campo input[type="text"], .campo input[type="email"], .campo textarea{
+    padding: 0 10px;
+    border: 1px solid #4F4F4F;
+    height: 50px;
+    width: 330px;
+    border-radius: 10px;
+  }
+  
+  .campo textarea{
+    height: 100px;
+    width: 330px;
+  }
+
+  .campo textarea{
+    resize: vertical
+  }
+  
+  .campo input[type="text"]:hover, .campo input[type="email"]:hover, .campo textarea:hover{
+    border: 1px solid #1073E8;
+  }
+  
+  .campo input:focus, textarea:focus{
+    background: rgb(228, 225, 225);
+  }
+  
+  .botao-mensagem{
+    font-size: 1.2em;
+    background: #AFAFAF;
+    color: #fff;
+    margin-bottom: 1em;
+    box-shadow: 2px 2px 2px rgb(160, 159, 159);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    border-radius: 22px;
+    height: 60px;
+    width: 330px;
+    cursor: pointer;
+    align-self: flex-start;
+  }
+  
+  .botao-mensagem:hover{
+    background: #1073E8;
+    color: #fff;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+  }
+  
+  
+  
+  
+  

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>ProvaTarley</title>
+</head>
+<body>
+    <header>
+        <div class="imagem-cacador">
+            <img src="imagens-icones/cacador.jpg" alt="um caçador com o seu cão" class="cacador">
+        </div>
+    </header>
+    <main>
+        <section class="section-intro">
+            <div class="div-intro-container">
+                <div class="container-avatar">
+                    <img src="imagens-icones/avatar.png" alt="avatar com mascara" class="avatar">
+                </div>
+                <div class="intro-sobre">
+                    <h1 class="sobre-h1">Sobre</h1>
+                    <span class="span-sobre">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, dignissimos. Praesentium nihil possimus et libero nisi voluptate in aperiam quidem recusandae iure sunt sint harum dolore, sit, optio officia ipsam</span>
+                </div>
+                <div class="div-info-span">
+                    <span class="intro-info">
+                        <strong class="blue-strong"> Idade: </strong> 31
+                    </span>
+                    <span class="intro-info">
+                        <strong class="blue-strong"> Endereço: </strong> Rua 88 na vila da serra
+                    </span>
+                    <span class="intro-info">
+                        <strong class="blue-strong"> e-mail: </strong> alex.smith@gmail.com
+                    </span>
+                    <span class="intro-info">
+                        <strong class="blue-strong">Telefone: </strong>31 9 8888-7777
+                    </span>
+                </div>
+            </div>
+        </section>
+        <section class="meus-trabalhos-section">
+            <div class="meus-trabalhos-container">
+                <h1 class="meus-trabalhos-h1">Meus Trabalhos</h1>
+                <div class ="div-trabalhos">
+                    <img src="imagens-icones/ecomerce.svg" alt="um icone de uma lojinha">
+                    <div class="div-explicacao">
+                        <h2 class="titulo-explicacao">e-commerce</h2>
+                        <div class="explicacao-trabalho">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, temporibus consectetur! Ut molestiae hic commodi unde ex eligendi, placeat sit quam temporibus deleniti minus aut sapiente! Cumque ipsam in doloremque.</div>
+                    </div>
+                </div>
+                <div class ="div-trabalhos"> 
+                    <img src="imagens-icones/lapis.svg" alt="um icone de lapis" class="icone-lapis">
+                    <div class="div-explicacao">
+                        <h2 class="titulo-explicacao">Redação</h2>
+                        <div class="explicacao-trabalho">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, temporibus consectetur! Ut molestiae hic commodi unde ex eligendi, placeat sit quam temporibus deleniti minus aut sapiente! Cumque ipsam in doloremque.</div>  
+                    </div>
+                </div>
+                <div class ="div-trabalhos">
+                    <img src="imagens-icones/www.svg" alt="www">
+                    <div class="div-explicacao">
+                        <h2 class="titulo-explicacao">Web Design</h2>
+                        <div class="explicacao-trabalho">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, temporibus consectetur! Ut molestiae hic commodi unde ex eligendi, placeat sit quam temporibus deleniti minus aut sapiente! Cumque ipsam in doloremque.</div>
+                    </div>
+                </div>
+                <div class ="div-trabalhos">
+                    <img src="imagens-icones/gestao.svg" alt="montanha com uma bandeira em cima">
+                    <div class="div-explicacao">
+                        <h2 class="titulo-explicacao">Gestão</h2>
+                        <div class="explicacao-trabalho">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, temporibus consectetur! Ut molestiae hic commodi unde ex eligendi, placeat sit quam temporibus deleniti minus aut sapiente! Cumque ipsam in doloremque.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contatos">
+            <div class="container-contatos">
+                <h1 class="title-contatos"> Contato </h1>
+                <!-- Pode testar o forms -->
+                <form form autocomplete="off" method="POST" action="https://formspree.io/f/mdoybrwl">
+                    <fieldset class="grupo">
+                      <div class="campo">
+                        <div class="div-nome-email">
+                            <label class="label-informacoes" for="txt-email"> Email </label>
+                            <input placeholder="Informe seu Email" type="email" name="email" required>
+                            <label class="label-informacoes" for="txt-nome"> Nome </label>
+                            <input placeholder="Informe seu Nome" type="text" name="nome"required>
+                        </div>
+                        <label class="label-informacoes" for="sua-senha-novamente"> Assunto </label>
+                        <input placeholder="Assunto a ser tratado" type="text" name="assunto" required>
+                        <label class="label-informacoes" for="sua-senha-novamente"> Mensagem </label>
+                        <textarea placeholder="Mensagem" id = "txt-descrition" name = "descrition" required></textarea>
+                      </div>
+                    </fieldset>
+                      <button type="submit" class="botao-mensagem"> Enviar mensagem </button>
+                </form>            
+            </div>
+        </section>
+    </main>
+</body>
+</html>
