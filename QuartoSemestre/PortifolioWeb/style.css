@@ -118,7 +118,6 @@ nav a:hover{
 
 .links.active{
   opacity: 1;
-  transform: translateX(0);
 }
 
 @keyframes navLinkFade {
