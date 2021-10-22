@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!-- O span foi colocado no meio pra ser manipulado no js, pois o js manipula 
+    elementos do html, sendo assim, eu manipulo so essa parte do texto, toda vez que 
+    o jogador errar ele decrementa o 10 -->
+    <h1>Jogo adivinhe um número em <span>10</span> tentativas.</h1>
+    <p>
+      Nós selecionamos um número aleatório entre 1 e 100. 
+      Veja se consegue adivinhar em 10 tentativas ou menos.
+      Nós lhe diremos se seu palpite foi muito alto ou muito baixo.
+    </p>
+
+    <!-- Aqui seria a tag <forms> mas não tem necessidade, pois a gente não esta enviando pro servidor, e sim so capturando o valor do usuario pra jogar o jogo
+    então por isso foi usado uma div no lugar do forms e outra o jogo vai rodar
+    na maquina do usuario então não precisa de internet. Obs: poderia usar o forms no
+    lugar da div-->
+      <!-- O id no elemento serve pra melhor manipulação no js e no css, mas a gente
+      usa mais o id nos elementos para serem manipulados no js, porque o id é unico
+      e geralmente aquela manipualção é voltada pra aquele elemento especifico-->
+    <div id="divForm">
+      <label>Digite um palpite:</label>
+
+      <!-- o min e o max é pra pessoa digitar entre 1 a 100, e o type number so aceita
+      numeros, lembrando que ele aceita numeros de pontos flutuantes-->
+      <input type="number" min="1" max="100" />
+      <button>Enviar palpite</button>
+    </div>
+
+    <!-- Essa div é a onde vai as informações pro usuario, sendo manipuladas pelo JS-->
+       <!--As coisas vão sendo inseridas na tela com JS-->
+    <div>
+
+      <!-- Aqui vai sendo colocado os palpites anteriores -->
+        <!-- As classes aqui tambem servem pra manipular esses elementos tanto no JS
+        como no CSS, mas pro JS é melhor usar o ID, mas pra nivel academico foi usado a
+        classe -->
+      <p class="palpites">Palpites anteriores:</p>
+
+      <!-- Aqui é jogo acabou, errado, acertou, etc -->
+      <p class="ultimoResultado"></p>
+
+      <!-- Aqui é pra falar se o numero dele esta perto ou baixo do numero aleatorio-->
+      <p class="baixoOuAlto"></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
