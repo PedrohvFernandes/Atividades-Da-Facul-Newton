@@ -1,6 +1,6 @@
 # Newton Paiva - Sistema de informção(SI) 
 
-Este repositório contém todas as atividades e projetos de aprendizagem desenvolvidas por <a href="https://www.linkedin.com/in/pedro-henrique-vieira-fernandes/">Pedro Henrique Vieira Fernandes </a> deste curso da <a href ="https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/">Udemy </a>
+Este repositório contém todas as atividades e projetos de aprendizagem desenvolvidas por <a href="https://www.linkedin.com/in/pedro-henrique-vieira-fernandes/">Pedro Henrique Vieira Fernandes </a> deste curso da <a href ="https://www.newtonpaiva.br/cursos/graduacao-presencial/sistemas-de-informacao/">Newton Paiva </a>
 
 "Seu esforço não faz maior sentido se você não acredita em si mesmo.- Naruto 🍜 "
 
