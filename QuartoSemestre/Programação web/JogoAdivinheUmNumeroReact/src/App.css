@@ -4,14 +4,11 @@ main {
   line-height: 100vh
 }
 
-/* Essas duas classe de estilo é para manipular dinamicamente o estilo dos elementos */
-/* Aqui é caso a pessoa acerta */
 .info {
   background-color: green;
   color: white;
 }
 
-/* Aqui é pra caso a pessoa perca */
 .erro {
   color: red;
 }

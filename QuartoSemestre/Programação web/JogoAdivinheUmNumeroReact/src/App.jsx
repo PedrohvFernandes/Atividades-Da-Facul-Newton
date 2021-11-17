@@ -3,7 +3,6 @@ import React, {useRef, useState} from 'react'
 import Titulo from './componentes/Titulo'
 import Descricao from './componentes/Descricao'
 
-
 import './App.css'
 
 let numeroAleatorio = Math.floor((Math.random() * 100) + 1);
@@ -28,7 +27,6 @@ export default () => {
   console.log('Palpites: ', palpites)
 
   const conferirPalpite = () => {
-    
     const valor = textoInput.current.value
 
     if(valor < 0 || valor > 100) {
@@ -38,6 +36,7 @@ export default () => {
 
       textoInput.current.focus()
     } else {
+
       setUltimoResultado('')
 
       if(valor == numeroAleatorio) {
@@ -49,19 +48,16 @@ export default () => {
 
       } else if(rodada > 0) {
         setUltimoResultado('Errado!')
-
         setClasseMensagem('erro')
 
         if(valor < numeroAleatorio)
           setBaixoOuAlto('Seu palpite está muito baixo!')
         else
           setBaixoOuAlto('Seu palpite está muito alto!')
-
           setRodada(rodada - 1)
-
+        
       } else {
         setUltimoResultado('FIM DO JOGO!')
-
         setClasseMensagem('erro')
         setCursor(true)
 
@@ -95,7 +91,6 @@ export default () => {
       <input className={cursor ? 'mudarCursorMouseBlock' : 'mudarCursorMouseDefault'} ref={textoInput} type='number' min={1} max={100} disabled={fimDoJogo} />
 
       <button className={cursor ? 'mudarCursorMouseBlock' : 'mudarCursorMouseDefault'} onClick={conferirPalpite} disabled={fimDoJogo}>Enviar palpite</button>
-      
       {
         fimDoJogo && <button onClick={reiniciarJogo}>Iniciar novo jogo</button>
       }
