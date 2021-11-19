@@ -13,35 +13,35 @@ Projeto da faculdade  <a href=https://github.com/PedrohvFernandes/Diseasy> Disea
 # Andamento do curso: ✔️(Check) 🕗(Em processo)
 
 ### 1 periodo: ✔️
-  ##### Leitura e Produção de Textos
-  ##### Construção de Algoritmos
-  ##### Fundamentos de Sistemas de Informação
-  ##### Arquitetura de Computadores
-  ##### Fundamentos de Ciências Exatas
-  ##### Projeto Integrador I
+   - Leitura e Produção de Textos
+   - Construção de Algoritmos
+   - Fundamentos de Sistemas de Informação
+   - Arquitetura de Computadores
+   - Fundamentos de Ciências Exatas
+   - Projeto Integrador I
   
 ### 2 periodo: ✔️
-  ##### Desenvolvimento Humano e Social
-  ##### Linguagem de Programação
-  ##### Metodologia de Desenvolvimento de Sistemas
-  ##### Sistemas Operacionais
-  ##### Estrutura de Dados
-  ##### Engenharia de Software
-  ##### Projeto Integrador II
+  - Desenvolvimento Humano e Social
+  - Linguagem de Programação
+  - Metodologia de Desenvolvimento de Sistemas
+  - Sistemas Operacionais
+  - Estrutura de Dados
+  - Engenharia de Software
+  - Projeto Integrador II
 
 ### 3 periodo: ✔️
-  ##### Empreendedorismo
-  ##### Estatística
-  ##### Programação Orientada à Objetos
-  ##### Redes de Computadores
-  ##### Análise de Sistemas
-  ##### Banco de dados
-  ##### Projeto Integrador III
+  - Empreendedorismo
+  - Estatística
+  - Programação Orientada à Objetos
+  - Redes de Computadores
+  - Análise de Sistemas
+  - Banco de dados
+  - Projeto Integrador III
   
 ### 4 periodo: 🕗
-  ##### Cidadania e Ética
-  ##### Qualidade e Testes de Software
-  ##### Programação WEB
-  ##### Business Intelligence
-  ##### Modelagem de Processos de Negócios
-  ##### Projeto Integrador IV
+  - Cidadania e Ética
+  - Qualidade e Testes de Software
+  - Programação WEB
+  - Business Intelligence
+  - Modelagem de Processos de Negócios
+  - Projeto Integrador IV
