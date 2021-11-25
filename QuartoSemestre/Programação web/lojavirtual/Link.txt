@@ -1,3 +1,5 @@
 Link do projeto no ar na heroku
 
 https://lojavitualpedrohenriquevieira.herokuapp.com
+
+npm i / npm install -> para pegar as dependencias do package.json
