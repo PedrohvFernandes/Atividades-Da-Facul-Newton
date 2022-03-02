@@ -6,7 +6,7 @@
 
 # COMPLETED
 <p align="center">
-  <img height="300" src="https://github.com/PedrohvFernandes/AtividadesDaFacul/blob/main/QuintoSemestre/Arquitetura%20de%20aplica%C3%A7%C3%B5es%20Web/learnyounode/Screenshots/Screen1.png">
+  <img height="300" src="https://github.com/PedrohvFernandes/AtividadesDaFacul/blob/main/QuintoSemestre/Arquitetura%20de%20aplica%C3%A7%C3%B5es%20Web/learnyounode/Screenshots/Conclus%C3%B5es.png">
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
