@@ -17,7 +17,13 @@
 - Para instalar o learnyounode, faremos de forma global com o npm:
 
 ## RUN:
-$ npm install -g learnyounode / npm install learnyounode
+- Global:
+$ npm install -g learnyounode 
+     <br> Ou </br>
+- No projeto:
+$ npm install learnyounode
+
+## Executar terminal cmd / vscode / git
 
 $ learnyounode
 
