@@ -10,8 +10,9 @@
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
-## Realizar as seis primeiras atividades do Nodeschool  https://nodeschool.io/pt-br/ (Links para um site externo.)
+## Realizar as seis primeiras atividades do Nodeschool  
 
+- https://nodeschool.io/pt-br/ (Links para um site externo.)
 - Workshop que ensina conceitos sobre o Node
 - Para instalar o learnyounode, faremos de forma global com o npm:
 
