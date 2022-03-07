@@ -46,7 +46,7 @@ Projeto da faculdade  <a href=https://github.com/PedrohvFernandes/Diseasy> Disea
   - Modelagem de Processos de Negócios
   - Projeto Integrador IV
 
-### 5 periodo: 🕗
+### 5 periodo: ❌ -> trancado
   - Gestão de projetos
   - Arquitetura de Aplicações Web
   - Programação para dispositivos moveis
