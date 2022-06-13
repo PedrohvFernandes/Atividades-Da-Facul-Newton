@@ -54,7 +54,7 @@ Projeto da faculdade  <a href=https://github.com/PedrohvFernandes/Diseasy> Disea
   - Segurança e Auditoria de Sistemas de Informação
   - Projeto Integrador V
 
-  ### 5 periodo EAD: 🕗 Em processo
+  ### 5 periodo EAD: ✔️
   - Gestão de projetos
   - Programação para dispositivos moveis
   - Segurança e Auditoria de Sistemas de Informação
